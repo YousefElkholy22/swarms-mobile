@@ -1,0 +1,11 @@
+{
+    "validators_comment": "------------------- validators_comment -------------------",
+    "enterYourEmail": "Please, Enter Your Email",
+    "enterYourPassword": "Please, Enter Your Password",
+    "invalidEmailMessage": "Your email address is incorrect",
+    "invalidPasswordMessage": "Your password is short",
+    "enterYourName": "Please, Enter Your Name",
+    "invalidNameMeg": "Your name is short",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "yourNameIsTooShort": "Your name is too short"
+}
