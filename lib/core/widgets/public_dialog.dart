@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 
 import '../helpers/extensions/sizedbox_extensions.dart';
 import '../styles/app_colors.dart';
-import 'public_text.dart';
+import '../styles/app_fonts.dart';
 import 'public_button.dart';
 
 class PublicDialog extends StatelessWidget {
@@ -40,18 +40,16 @@ class PublicDialog extends StatelessWidget {
           children: [
             _getImage(),
             24.ph,
-            PublicText(
-              text: title,
-              size: 20.sp,
-              fw: FontWeight.bold,
+            Text(
+              title,
+              style: AppFonts.black20Bold,
             ),
             16.ph,
-            PublicText(
-              text: subtitle,
-              size: 14.sp,
-              color: AppColors.grey,
-              align: TextAlign.center,
-              max: 3,
+            Text(
+              subtitle,
+              maxLines: 3,
+              textAlign: TextAlign.center,
+              style: AppFonts.grey14Normal.copyWith(),
             ),
             24.ph,
             PublicButton(
