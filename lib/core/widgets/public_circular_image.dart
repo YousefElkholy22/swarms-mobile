@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../styles/app_colors.dart';
-import 'public_text.dart';
+import '../styles/app_fonts.dart';
 
 enum ImageType { network, file, asset, none }
 
@@ -44,10 +44,10 @@ class PublicCircularImage extends StatelessWidget {
   }
 
   Widget _getNoneImage() {
-    return const Center(
-      child: PublicText(
-        text: "no image",
-        color: AppColors.white,
+    return Center(
+      child: Text(
+        "no image",
+        style: AppFonts.white16Normal,
       ),
     );
   }

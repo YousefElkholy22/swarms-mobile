@@ -4,8 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../helpers/extensions/sizedbox_extensions.dart';
 import '../styles/app_colors.dart';
+import '../styles/app_fonts.dart';
 import 'public_button.dart';
-import 'public_text.dart';
 
 class PublicSingleButtonBottomSheet extends StatelessWidget {
   /// svg image
@@ -46,18 +46,16 @@ class PublicSingleButtonBottomSheet extends StatelessWidget {
             height: 120.w,
           ),
           16.ph,
-          PublicText(
-            text: title,
-            size: 22.sp,
-            fw: FontWeight.bold,
+          Text(
+            title,
+            style: AppFonts.black22Bold,
           ),
           8.ph,
-          PublicText(
-            text: subtitle,
-            size: 14.sp,
-            color: AppColors.grey,
-            align: TextAlign.center,
-            max: 3,
+          Text(
+            subtitle,
+            maxLines: 3,
+            textAlign: TextAlign.center,
+            style: AppFonts.grey14Normal.copyWith(),
           ),
           32.ph,
           PublicButton(

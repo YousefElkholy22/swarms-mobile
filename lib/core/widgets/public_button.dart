@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 import '../styles/app_colors.dart';
-import 'public_text.dart';
+import '../styles/app_fonts.dart';
 
 class PublicButton extends StatelessWidget {
   final String title;
@@ -41,11 +41,9 @@ class PublicButton extends StatelessWidget {
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: verticalpadding ?? 16.h),
-          child: PublicText(
-            text: title,
-            size: titleSize ?? 22.sp,
-            color: titleColor ?? AppColors.white,
-            fw: FontWeight.normal, // normal
+          child: Text(
+            title,
+            style: AppFonts.white20Normal,
           ),
         ),
       ),

@@ -1,12 +1,11 @@
-
 import '../constants/app_constants.dart';
+import '../styles/app_fonts.dart';
 import '../styles/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../helpers/cache/app_prefs.dart';
 import '../service_locator/service_locator.dart';
-import 'public_text.dart';
+
 
 enum Switchers {
   darkMode,
@@ -38,9 +37,9 @@ class _PublicSwitchListTileState extends State<PublicSwitchListTile> {
   Widget build(BuildContext context) {
     return ListTile(
       leading: widget.icon,
-      title: PublicText(
-        text: widget.title,
-        color: Colors.black,
+      title: Text(
+         widget.title,
+        style: AppFonts.black16Normal,
       ),
       trailing: Transform.scale(
         scale: 0.7,

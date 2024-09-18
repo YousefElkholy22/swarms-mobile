@@ -1,9 +1,9 @@
 import 'package:another_flushbar/flushbar.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:flutter/material.dart';
 
-import 'public_text.dart';
+import '../styles/app_fonts.dart';
+
+
 
 // ignore: must_be_immutable
 class MySnackBar extends Flushbar {
@@ -21,10 +21,10 @@ class MySnackBar extends Flushbar {
       flushbarPosition: FlushbarPosition.TOP,
       flushbarStyle: FlushbarStyle.FLOATING,
       messageText: Center(
-        child: PublicText(
-          text: message,
-          color: Colors.white,
-          size: 12.sp,
+        child: Text(
+           message,
+           style: AppFonts.white12Normal,
+          
         ),
       ),
       margin: const EdgeInsets.symmetric(

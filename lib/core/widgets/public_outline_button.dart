@@ -1,9 +1,8 @@
-import '../styles/app_colors.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:flutter/material.dart';
-
-import 'public_text.dart';
+import '../styles/app_colors.dart';
+import '../styles/app_fonts.dart';
 
 class PublicOutlineButton extends StatelessWidget {
   final String title;
@@ -43,11 +42,9 @@ class PublicOutlineButton extends StatelessWidget {
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: verticalpadding ?? 16.h),
-          child: PublicText(
-            text: title,
-            size: titleSize ?? 22.sp,
-            color: titleColor,
-            fw: FontWeight.w600, // semi bold
+          child: Text(
+            title,
+            style: AppFonts.black22SemiBold.copyWith(fontSize: titleSize),
           ),
         ),
       ),

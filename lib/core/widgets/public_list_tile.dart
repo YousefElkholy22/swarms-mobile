@@ -1,7 +1,8 @@
-import '../styles/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'public_text.dart';
+
+import '../styles/app_colors.dart';
+import '../styles/app_fonts.dart';
 
 class PublicListTile extends StatelessWidget {
   final String title;
@@ -33,9 +34,9 @@ class PublicListTile extends StatelessWidget {
           size: 22.w,
         ),
       ),
-      title: PublicText(
-        text: title,
-        size: textSize ?? 16.sp,
+      title: Text(
+        title,
+        style: AppFonts.black16Normal.copyWith(fontSize: textSize),
       ),
       trailing: Icon(
         Icons.arrow_forward_ios_outlined,
