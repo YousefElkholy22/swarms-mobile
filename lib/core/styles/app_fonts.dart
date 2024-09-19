@@ -91,4 +91,17 @@ class AppFonts {
     color: AppColors.textBlack,
     fontWeight: FontWeight.normal,
   );
+
+  /// button fonts
+  static final TextStyle white20Bold = TextStyle(
+    fontSize: 20.sp,
+    color: AppColors.white,
+    fontWeight: FontWeight.bold,
+  );
+
+  static final TextStyle blue16Bold = TextStyle(
+    fontSize: 16.sp,
+    color: AppColors.blue,
+    fontWeight: FontWeight.bold,
+  );
 }

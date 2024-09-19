@@ -27,7 +27,7 @@ class OnboardingItem extends StatelessWidget {
         ),
         60.ph,
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10.w),
+          padding: EdgeInsets.symmetric(horizontal: 6.w),
           child: Text(
             onBoarding.title,
             style: AppFonts.darkGrey32Bold,
@@ -35,7 +35,7 @@ class OnboardingItem extends StatelessWidget {
         ),
         24.ph,
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10.w),
+          padding: EdgeInsets.symmetric(horizontal: 6.w),
           child: Text(
             onBoarding.description,
             maxLines: 3,

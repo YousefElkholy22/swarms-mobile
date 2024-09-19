@@ -9,7 +9,7 @@ class PublicButton extends StatelessWidget {
   final String title;
   final void Function()? onPressed;
   final double? width;
-  final double borderRadius;
+  final double? borderRadius;
   final double? titleSize;
   final Color? titleColor;
   final Color? backgroundColor;
@@ -21,7 +21,7 @@ class PublicButton extends StatelessWidget {
     this.onPressed,
     this.titleSize,
     this.width,
-    this.borderRadius = 12,
+    this.borderRadius,
     this.titleColor,
     this.backgroundColor,
     this.verticalpadding,
@@ -30,20 +30,20 @@ class PublicButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width ?? 0.5.sw,
+      width: width ??1.sw,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: backgroundColor ?? AppColors.blue,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(borderRadius),
+            borderRadius: BorderRadius.circular(borderRadius ?? 16.r),
           ),
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: verticalpadding ?? 16.h),
           child: Text(
             title,
-            style: AppFonts.white20Normal,
+            style: AppFonts.white20Bold,
           ),
         ),
       ),

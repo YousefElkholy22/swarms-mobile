@@ -37,8 +37,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.only(
-            left: 16.w,
-            right: 16.w,
+            left: 20.w,
+            right: 20.w,
             top: 140.h,
             bottom: 80.h,
           ),
