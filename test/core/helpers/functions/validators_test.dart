@@ -33,8 +33,12 @@ void main() {
       expect(passwordValidator('short'), S.current.invalidPasswordMessage);
     });
 
-    test('returns null when password is valid', () {
-      expect(passwordValidator('ValidPassword123'), null);
+    test('returns error message when password is invalid', () {
+      expect(passwordValidator('ValidPassword123'), S.current.invalidPasswordMessage);
+    });
+
+    test('returns error message when password is invalid', () {
+      expect(passwordValidator('ValidPassword123@'), null);
     });
   });
 
@@ -58,11 +62,11 @@ void main() {
     });
 
     test('returns error message when name is too short', () {
-      expect(nameValidator('Al'), S.current.yourNameIsTooShort);
+      expect(nameValidator('ar'), S.current.yourNameIsTooShort);
     });
 
     test('returns null when name is valid', () {
-      expect(nameValidator('Alice'), null);
+      expect(nameValidator('Arafat'), null);
     });
   });
 }

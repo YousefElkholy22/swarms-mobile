@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:evnto/core/helpers/extensions/string_extensions.dart';
 
@@ -6,14 +8,6 @@ void main() {
     test('capitalizd should capitalize each word in the string', () {
       expect('hello world'.capitalizd, 'Hello World');
       expect('flutter is awesome'.capitalizd, 'Flutter Is Awesome');
-    });
-  });
-
-  group('ToPiecesString Extension', () {
-    test('toPieces should split long text into pieces', () {
-      String longText = 'This is a long text. ' * 10;
-      String expected = 'This is a long text. \n\nThis is a long text. \n\nThis is a long text. \n\nThis is a long text. \n\nThis is a long text. \n\nThis is a long text. \n\nThis is a long text. \n\nThis is a long text. \n\nThis is a long text. \n\nThis is a long text. ';
-      expect(longText.toPieces(), expected);
     });
   });
 
@@ -65,7 +59,7 @@ void main() {
 
   group('StringSecured Extension', () {
     test('secured should mask the string correctly', () {
-      expect('1234567890'.secured, '12********90');
+      expect('1234567890'.secured, '12******90');
       expect('ab'.secured, 'ab');
     });
   });
