@@ -7,8 +7,6 @@ import '../../../core/helpers/cache/app_prefs.dart';
 import '../../../core/router/app_routes.dart';
 import '../../../core/service_locator/service_locator.dart';
 
-
-
 part 'onboarding_state.dart';
 
 class OnboardingCubit extends Cubit<OnboardingState> {
@@ -17,8 +15,6 @@ class OnboardingCubit extends Cubit<OnboardingState> {
   late final AppPrefs appPrefs;
 
   OnboardingCubit() : super(const ChangeCurrentIndexState(index: 0));
-
-  static OnboardingCubit get(BuildContext context) => BlocProvider.of(context);
 
   void init() {
     appPrefs = getIt<AppPrefs>();
@@ -29,7 +25,7 @@ class OnboardingCubit extends Cubit<OnboardingState> {
     pageController.dispose();
   }
 
-  void onBoardingButton(BuildContext context) {
+  void forwardButton(BuildContext context) {
     if (currentIndex == 1) {
       appPrefs.setBool(PrefsKeys.userOpenedAppFirstTime, true);
       if (context.mounted) {
@@ -39,26 +35,12 @@ class OnboardingCubit extends Cubit<OnboardingState> {
         );
       }
     } else {
-      increaseIndex();
+      _increaseIndex();
     }
   }
 
   void backButton() {
-    decreaseIndex();
-  }
-
-  void skip() {
-    currentIndex = AppConstants.onboardingContents.length - 1;
-    pageController.animateToPage(
-      2,
-      duration: const Duration(milliseconds: 500),
-      curve: Curves.easeOut,
-    );
-    emit(
-      ChangeCurrentIndexState(
-        index: currentIndex,
-      ),
-    );
+    _decreaseIndex();
   }
 
   void changeIndex(int index) {
@@ -66,8 +48,8 @@ class OnboardingCubit extends Cubit<OnboardingState> {
     emit(ChangeCurrentIndexState(index: index));
   }
 
-  void increaseIndex() {
-    if (currentIndex < AppConstants.onboardingContents.length -1) {
+  void _increaseIndex() {
+    if (currentIndex < AppConstants.onboardingContents.length - 1) {
       currentIndex++;
       pageController.nextPage(
         duration: const Duration(milliseconds: 500),
@@ -81,7 +63,7 @@ class OnboardingCubit extends Cubit<OnboardingState> {
     }
   }
 
-  void decreaseIndex() {
+  void _decreaseIndex() {
     if (currentIndex > 0) {
       currentIndex--;
       pageController.previousPage(

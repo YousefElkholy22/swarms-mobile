@@ -8,14 +8,6 @@ import 'app_routes.dart';
 class RouteGenerate {
   static Route<dynamic> getRoute(RouteSettings routeSettings) {
     switch (routeSettings.name) {
-      case AppRoutes.root:
-        return MaterialPageRoute(
-          builder: (_) => Scaffold(
-            appBar: AppBar(title: const Text("root")),
-            body: const Center(child: Text("root Page")),
-          ),
-        );
-
       case AppRoutes.onboarding:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(

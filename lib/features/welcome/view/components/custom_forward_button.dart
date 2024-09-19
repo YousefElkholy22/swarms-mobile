@@ -13,7 +13,7 @@ class CustomForwardButton extends StatelessWidget {
     return InkWell(
       onTap: () {
         final bloc = context.read<OnboardingCubit>();
-        bloc.onBoardingButton(context);
+        bloc.forwardButton(context);
       },
       child: Container(
         height: 46.h,

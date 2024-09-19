@@ -1,7 +1,5 @@
 class AppRoutes {
   AppRoutes._private();
-  /// root
-  static const String root = '/';
 
   /// welcome
   static const String welcome = '/welcome';
