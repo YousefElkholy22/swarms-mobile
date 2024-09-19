@@ -5,6 +5,7 @@ class AppRoutes {
 
   /// welcome
   static const String welcome = '/welcome';
+  static const String onboarding = '/onboarding';
 
   /// auth
   static const String login = '/login';

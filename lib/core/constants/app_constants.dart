@@ -18,6 +18,8 @@ class AppConstants {
       image: Assets.imagesOnboarding2,
     ),
   ];
+
+  static var onboardingButtons;
 }
 
 class PrefsKeys {

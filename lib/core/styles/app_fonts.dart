@@ -6,10 +6,9 @@ import 'app_colors.dart';
 class AppFonts {
   AppFonts._();
 
-  // Base fonts 
-  
-  // - black 
+  // Base fonts
 
+  // - black
   static final TextStyle black14Normal = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeight.normal,
@@ -59,7 +58,7 @@ class AppFonts {
     color: AppColors.white,
     fontWeight: FontWeight.normal,
   );
-  
+
   static final TextStyle white20Normal = TextStyle(
     fontSize: 22.sp,
     color: AppColors.white,
@@ -67,10 +66,29 @@ class AppFonts {
   );
 
   // - grey
-  
+
   static final TextStyle grey14Normal = TextStyle(
     fontSize: 14.sp,
     color: AppColors.grey,
+    fontWeight: FontWeight.normal,
+  );
+
+  static final TextStyle grey16Normal = TextStyle(
+    fontSize: 16.sp,
+    color: AppColors.grey,
+    fontWeight: FontWeight.normal,
+  );
+
+  /// headline fonts
+  static final TextStyle darkGrey32Bold = TextStyle(
+    fontSize: 32.sp,
+    color: AppColors.textDarkGrey,
+    fontWeight: FontWeight.bold,
+  );
+
+  static final TextStyle black20Noraml = TextStyle(
+    fontSize: 20.sp,
+    color: AppColors.textBlack,
     fontWeight: FontWeight.normal,
   );
 }

@@ -1,5 +1,8 @@
+import 'package:evnto/features/welcome/view/pages/onboarding_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../features/welcome/bloc/onboarding_bloc.dart';
 import 'app_routes.dart';
 
 class RouteGenerate {
@@ -10,6 +13,14 @@ class RouteGenerate {
           builder: (_) => Scaffold(
             appBar: AppBar(title: const Text("root")),
             body: const Center(child: Text("root Page")),
+          ),
+        );
+
+      case AppRoutes.onboarding:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (_) => OnboardingCubit(),
+            child: const OnboardingPage(),
           ),
         );
 

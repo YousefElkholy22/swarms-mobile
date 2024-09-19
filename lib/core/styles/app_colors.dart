@@ -5,12 +5,15 @@ class AppColors {
   AppColors._();
 
   /// Primary colors
-  static const blue = Colors.blue;
+  static const blue = Color(0xff7848FA);
+  static Color purple = HexColor("#7848FA");
 
   /// Secondary colors
-  static const orange = Colors.orange;
-  static const lightGrey = Color(0xFFDFDEDE);
-  static Color purple = HexColor("#7848FA");
+  static const lightGrey = Color(0xFFDCDCDC);
+
+  /// text colors
+  static const textDarkGrey = Color(0xff3D3D3D);
+  static const textBlack = Color(0xff292929);
 
   /// Basic colors
   static const white = Colors.white;

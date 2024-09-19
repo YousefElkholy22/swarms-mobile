@@ -4,8 +4,7 @@ import 'package:flutter/material.dart';
 
 Widget buildInputForm(
   BuildContext context, {
-  Color backgroundColor =
-      const Color.from(red: 250, green: 250, blue: 250, alpha: 1),
+  Color backgroundColor = const Color.fromARGB(255, 250, 250, 250),
   required TextEditingController controller,
   required Function validate,
   required String hint,
