@@ -114,9 +114,9 @@ flutter_assets:
 #     image: assets\images\splash_android_12.png
 #     color: "#ffffff"
 
-# flutter_launcher_icons:
-#   android: true
-#   ios: true
-#   image_path: "assets/images/logo_foreground.png"
-#   adaptive_icon_backgorund: "#105161"
-#   adaptive_icon_foreground: "assets/images/logo_foreground.png"
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/app_icon.png"
+  adaptive_icon_backgorund: "#ffffff"
+  adaptive_icon_foreground: "assets/icons/app_icon.png"
