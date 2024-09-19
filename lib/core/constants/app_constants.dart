@@ -1,6 +1,7 @@
 import '../../features/welcome/data/models/onboarding_entity.dart';
-import '../../resources/constants/app_assets.dart';
 import '../localization/generated/l10n.dart';
+
+import 'app_assets.dart';
 
 class AppConstants {
   AppConstants._();

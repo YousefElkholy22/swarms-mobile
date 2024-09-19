@@ -101,7 +101,7 @@ flutter_intl:
 
 flutter_assets:
   assets_path: assets/
-  output_path: lib/resources/constants/
+  output_path: lib/core/constants/
   filename: app_assets.dart
   field_prefix:
 
