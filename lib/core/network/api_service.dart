@@ -1,4 +1,3 @@
-
 import '../constants/app_constants.dart';
 import 'api_constants.dart';
 import 'network_info.dart';
@@ -59,7 +58,7 @@ class ApiService {
   void _setUpDioConfig() {
     _dio = Dio(
       BaseOptions(
-        baseUrl: ApiConstants.baseUrl,
+        // baseUrl: ApiConstants.baseUrl,
         headers: headers,
         receiveDataWhenStatusError: true,
         connectTimeout: const Duration(milliseconds: 3600),

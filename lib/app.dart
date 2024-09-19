@@ -1,3 +1,5 @@
+import 'package:evnto/features/authentcation/view/screens/register_screen.dart';
+
 import 'core/localization/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
         scrollBehavior: ScrollConfiguration.of(context).copyWith(
           physics: const BouncingScrollPhysics(),
         ),
-        home: const Scaffold(),
+        home: const RegisterScreen(),
       ),
     );
   }

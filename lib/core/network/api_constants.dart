@@ -1,8 +1,6 @@
-import 'package:evnto/core/helpers/env/env.dart';
-
 class ApiConstants {
   ApiConstants._();
-  static final baseUrl = Env.baseUrl;
+  //static final baseUrl = Env.baseUrl;
 }
 
 class ApiEndPoints {
