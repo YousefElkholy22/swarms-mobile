@@ -6,7 +6,7 @@ class AppThemes {
 
   static ThemeData light = ThemeData(
     useMaterial3: true,
-    fontFamily: "Inter",
+    fontFamily: "Quicksand",
 
     /// Colors
     scaffoldBackgroundColor: Colors.white,
