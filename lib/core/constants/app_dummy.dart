@@ -3,7 +3,7 @@ import '../../features/questions/data/models/question_entity.dart';
 class AppDummy {
   AppDummy._();
 
-  static const questions = [
+  static final questions = [
     QuestionEntity(
       question: "Choose Your College",
       options: [

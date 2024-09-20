@@ -1,8 +1,12 @@
 import 'package:evnto/core/helpers/extensions/sizedbox_extensions.dart';
+import 'package:evnto/core/router/app_routes.dart';
 import 'package:evnto/core/styles/app_fonts.dart';
 import 'package:evnto/core/widgets/public_button.dart';
+import 'package:evnto/features/questions/bloc/question_cubit.dart';
+import 'package:evnto/features/questions/bloc/question_state.dart';
 import 'package:evnto/features/questions/view/components/options_list.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/localization/generated/l10n.dart';
@@ -17,6 +21,7 @@ class QuestionsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bloc = context.read<QuestionCubit>();
     return Column(
       children: [
         Text(
@@ -32,13 +37,28 @@ class QuestionsBody extends StatelessWidget {
           ),
         ),
         48.ph,
-        Align(
-          alignment: Alignment.centerRight,
-          child: PublicButton(
-            width: 100.w,
-            onPressed: () {},
-            title: S.of(context).next,
-          ),
+        BlocBuilder<QuestionCubit, QuestionState>(
+          buildWhen: (_, current) => current is NextButtonEnableState,
+          builder: (context, state) {
+            return Align(
+              alignment: Alignment.centerRight,
+              child: PublicButton(
+                width: 100.w,
+                onPressed: bloc.isNextButtonEnabled
+                    ? () {
+                        bloc.questionAnswered(() {
+                          Navigator.pushNamedAndRemoveUntil(
+                            context,
+                            AppRoutes.home,
+                            (route) => false,
+                          );
+                        });
+                      }
+                    : null,
+                title: S.of(context).next,
+              ),
+            );
+          },
         )
       ],
     );

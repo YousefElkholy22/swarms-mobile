@@ -11,4 +11,10 @@ class AppRoutes {
   static const String forgotPassword = '/forgot-password';
   static const String verifyEmail = '/verify-email';
   static const String resetPassword = '/reset-password';
+
+  /// questions
+  static const String questions = '/questions';
+
+  /// home
+  static const String home = '/home';
 }

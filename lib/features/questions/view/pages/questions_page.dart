@@ -1,6 +1,9 @@
 import 'package:evnto/core/constants/app_dummy.dart';
 import 'package:evnto/core/helpers/extensions/sizedbox_extensions.dart';
+import 'package:evnto/features/questions/bloc/question_cubit.dart';
+import 'package:evnto/features/questions/bloc/question_state.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../components/questions_bar.dart';
@@ -19,15 +22,16 @@ class QuestionsPage extends StatelessWidget {
             children: [
               const QuestionsBar(),
               32.ph,
-              Text(
-                "",
-                style: TextStyle(
-                  fontSize: 24.sp,
-                  fontWeight: FontWeight.bold,
-                ),
+              BlocBuilder<QuestionCubit, QuestionState>(
+                buildWhen: (_, current) =>
+                    current is QuestionAnsweredState ||
+                    current is QuestionBackState,
+                builder: (context, state) {
+                  final bloc = context.read<QuestionCubit>();
+                  return QuestionsBody(
+                      question: bloc.questions[bloc.questionPage - 1]);
+                },
               ),
-              32.ph,
-              QuestionsBody(question: AppDummy.questions[0]),
             ],
           ),
         ),

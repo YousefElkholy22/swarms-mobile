@@ -17,10 +17,11 @@ class OptionListView extends StatelessWidget {
       itemCount: options.length,
       separatorBuilder: (_, __) => 20.ph,
       itemBuilder: (context, index) {
-        return OptionCard(option: options[index]);
+        return OptionCard(
+          option: options[index],
+          index: index,
+        );
       },
     );
   }
 }
-
-

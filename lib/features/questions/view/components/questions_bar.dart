@@ -1,6 +1,10 @@
+import 'package:evnto/core/constants/app_dummy.dart';
 import 'package:evnto/core/helpers/extensions/sizedbox_extensions.dart';
+import 'package:evnto/features/questions/bloc/question_cubit.dart';
+import 'package:evnto/features/questions/bloc/question_state.dart';
 import 'package:evnto/features/shared/view/components/shared_back_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'linear_precent_progress.dart';
 
@@ -9,14 +13,23 @@ class QuestionsBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bloc = context.read<QuestionCubit>();
     return Row(
       children: [
         SharedBackButton(
-          onPressed: () {},
+          onPressed: () {
+            bloc.backButton();
+          },
         ),
         60.pw,
-        const LinearPrecentProgress(
-          progress: 0.33,
+        BlocBuilder<QuestionCubit, QuestionState>(
+          buildWhen: (_, current) =>
+              current is QuestionAnsweredState || current is QuestionBackState,
+          builder: (context, state) {
+            return LinearPrecentProgress(
+              progress: bloc.questionPage / AppDummy.questions.length,
+            );
+          },
         ),
       ],
     );

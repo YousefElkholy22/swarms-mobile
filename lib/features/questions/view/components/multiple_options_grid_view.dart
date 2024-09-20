@@ -21,7 +21,10 @@ class MultipleOptionsGridView extends StatelessWidget {
         crossAxisSpacing: 60.w,
       ),
       itemBuilder: (_, index) {
-        return OptionCard(option: options[index]);
+        return OptionCard(
+          option: options[index],
+          index: index,
+        );
       },
     );
   }
