@@ -3,21 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/constants/app_constants.dart';
-import '../../../core/helpers/cache/app_prefs.dart';
-import '../../../core/router/app_routes.dart';
-import '../../../core/service_locator/service_locator.dart';
 
 part 'onboarding_state.dart';
 
 class OnboardingCubit extends Cubit<OnboardingState> {
   int currentIndex = 0;
   late final PageController pageController;
-  late final AppPrefs appPrefs;
 
   OnboardingCubit() : super(const ChangeCurrentIndexState(index: 0));
 
   void init() {
-    appPrefs = getIt<AppPrefs>();
     pageController = PageController();
   }
 
@@ -25,15 +20,9 @@ class OnboardingCubit extends Cubit<OnboardingState> {
     pageController.dispose();
   }
 
-  void forwardButton(BuildContext context) {
+  void forwardButton(void Function() onFinish) {
     if (currentIndex == 1) {
-      appPrefs.setBool(PrefsKeys.userOpenedAppFirstTime, true);
-      if (context.mounted) {
-        Navigator.pushReplacementNamed(
-          context,
-          AppRoutes.welcome,
-        );
-      }
+      onFinish();
     } else {
       _increaseIndex();
     }

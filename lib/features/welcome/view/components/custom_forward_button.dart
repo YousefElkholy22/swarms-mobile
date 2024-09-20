@@ -1,7 +1,11 @@
+import 'package:evnto/core/helpers/cache/app_prefs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/constants/app_constants.dart';
+import '../../../../core/router/app_routes.dart';
+import '../../../../core/service_locator/service_locator.dart';
 import '../../../../core/styles/app_colors.dart';
 import '../../bloc/onboarding_bloc.dart';
 
@@ -13,7 +17,9 @@ class CustomForwardButton extends StatelessWidget {
     return InkWell(
       onTap: () {
         final bloc = context.read<OnboardingCubit>();
-        bloc.forwardButton(context);
+        bloc.forwardButton(() {
+          _onFinishOnboarding(context);
+        });
       },
       child: Container(
         height: 46.h,
@@ -29,5 +35,16 @@ class CustomForwardButton extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _onFinishOnboarding(BuildContext context) {
+    final appPrefs = getIt<AppPrefs>();
+    appPrefs.setBool(PrefsKeys.userOpenedAppFirstTime, true);
+    if (context.mounted) {
+      Navigator.pushReplacementNamed(
+        context,
+        AppRoutes.welcome,
+      );
+    }
   }
 }
