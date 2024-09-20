@@ -7,9 +7,9 @@
 3. [Project Architecture](#project-architecture)
 4. [UI Screens](#ui-screens)
 5. [Demo](#demo)
-5. [Contributing](#Contributing)
-6. [License](#License)
-7. [Contact](#Contact)
+6. [Contributing](#Contributing)
+7. [License](#License)
+8. [Contact](#Contact)
 
 ## Overview
 
@@ -143,6 +143,8 @@ lib/
 │       ├── bloc/ 
 │       ├── data/ 
 │       │   ├── models/ 
+│       │   │   ├── Entites/ 
+│       │   │   └── DTOs/
 │       │   └── repos/
 │       └── view/
 │           ├── components/ 
@@ -179,6 +181,64 @@ Contributions are welcome!
 3. Make your changes and commit them (`git commit -m 'Add new feature'`).
 4. Push to the branch (`git push origin feature-branch`).
 5. Create a new Pull Request.
+
+## Running the App
+
+How to run the app on different platforms (Android, iOS).
+
+### Android
+Ensure you have an Android emulator running or an Android device connected.
+Run the following command:
+
+### IOS
+Ensure you have an iOS simulator running or an iOS device connected.
+Run the following command:
+
+### Steps
+
+1. Clone the repository
+
+```sh
+git clone https://github.com/swarmsTeam/swarms-mobile.git
+cd swarms-mobile
+```
+
+2. Install dependencies:
+
+```sh
+flutter pub get
+```
+
+3. Run the application:
+
+```sh
+flutter run
+```
+
+## Running Tests
+
+How to run the unit tests
+
+### Steps
+
+1. Clone the repository
+
+```sh
+git clone https://github.com/swarmsTeam/swarms-mobile.git
+cd swarms-mobile
+```
+
+2. Install dependencies:
+
+```sh
+flutter pub get
+```
+
+3. Run the tests:
+
+```sh
+flutter test
+```
 
 
 ## License
