@@ -32,22 +32,22 @@ class _LoginScreenState extends State<LoginScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            buildAuthBackground(
-              context,
+            AuthLayout(
               title: "Welcome Back!",
               fun: () {},
               widgets: [
-                buildInputForm(context,
-                    controller: emailController,
-                    validate: (String value) {},
-                    hint: "Email",
-                    type: TextInputType.emailAddress,
-                    width: double.infinity),
+                InputForm(
+                  controller: emailController,
+                  validate: (String value) {},
+                  hint: "Email",
+                  type: TextInputType.emailAddress,
+                  width: double.infinity,
+                  isPassword: false,
+                ),
                 SizedBox(
                   height: context.height * 0.035,
                 ),
-                buildInputForm(
-                  context,
+                InputForm(
                   controller: passwordController,
                   validate: (String value) {},
                   hint: "Password",
@@ -65,6 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             : Icons.visibility_off_outlined,
                         color: AppColors.grey,
                       )),
+                  isPassword: isPassword,
                 ),
                 SizedBox(
                   height: context.height * 0.01,
