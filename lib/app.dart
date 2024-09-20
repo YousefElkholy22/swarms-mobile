@@ -1,4 +1,6 @@
+
 import 'package:evnto/core/router/app_routes.dart';
+
 
 import 'core/localization/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -33,6 +35,7 @@ class MyApp extends StatelessWidget {
         ),
         // home: const OnboardingPage(),
         initialRoute: AppRoutes.onboarding,
+
       ),
     );
   }
