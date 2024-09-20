@@ -17,6 +17,7 @@ class AppDummy {
     ),
     QuestionEntity(
       question: "Select events you are interested in",
+      isMultiple: true,
       options: [
         "Workshops",
         "Seminars",
@@ -28,6 +29,7 @@ class AppDummy {
     ),
     QuestionEntity(
       question: "Select skills you are interested in",
+      isMultiple: true,
       options: [
         "Project Management",
         "Time Management",

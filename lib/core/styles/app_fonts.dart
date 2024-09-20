@@ -7,8 +7,6 @@ class AppFonts {
   AppFonts._();
 
   // Base fonts
-
-  // - black
   static final TextStyle black14Normal = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeight.normal,
@@ -27,12 +25,6 @@ class AppFonts {
     color: Colors.black,
   );
 
-  static final TextStyle black22SemiBold = TextStyle(
-    fontSize: 22.sp,
-    fontWeight: FontWeight.w600,
-    color: Colors.black,
-  );
-
   static final TextStyle black22Bold = TextStyle(
     fontSize: 22.sp,
     fontWeight: FontWeight.bold,
@@ -45,7 +37,6 @@ class AppFonts {
     color: Colors.black,
   );
 
-  // - white
 
   static final TextStyle white12Normal = TextStyle(
     fontSize: 12.sp,
@@ -65,7 +56,6 @@ class AppFonts {
     fontWeight: FontWeight.normal,
   );
 
-  // - grey
 
   static final TextStyle grey14Normal = TextStyle(
     fontSize: 14.sp,
@@ -79,7 +69,7 @@ class AppFonts {
     fontWeight: FontWeight.normal,
   );
 
-  /// headline fonts
+  /// Texts fonts
   static final TextStyle darkGrey32Bold = TextStyle(
     fontSize: 32.sp,
     color: AppColors.textDarkGrey,
@@ -96,6 +86,12 @@ class AppFonts {
   static final TextStyle white20Bold = TextStyle(
     fontSize: 20.sp,
     color: AppColors.white,
+    fontWeight: FontWeight.bold,
+  );
+
+  static final TextStyle blue20Bold = TextStyle(
+    fontSize: 20.sp,
+    color: AppColors.blue,
     fontWeight: FontWeight.bold,
   );
 
