@@ -38,30 +38,33 @@ class _RegisterScreenState extends State<RegisterScreen> {
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         // back ground layout
-        child: buildAuthBackground(
-          context,
+        child: AuthLayout(
           title: 'Create Account!',
           fun: () {},
           widgets: [
-            buildInputForm(context,
-                controller: nameController,
-                validate: (String value) {},
-                hint: "Full Name",
-                type: TextInputType.name,
-                width: double.infinity),
+            InputForm(
+              controller: nameController,
+              validate: (String value) {},
+              hint: "Full Name",
+              type: TextInputType.name,
+              width: double.infinity,
+              isPassword: false,
+            ),
             SizedBox(
               height: context.height * 0.035,
             ),
-            buildInputForm(context,
-                controller: emailController,
-                validate: (String value) {},
-                hint: "Email",
-                type: TextInputType.emailAddress,
-                width: double.infinity),
+            InputForm(
+              controller: emailController,
+              validate: (String value) {},
+              hint: "Email",
+              type: TextInputType.emailAddress,
+              width: double.infinity,
+              isPassword: false,
+            ),
             SizedBox(
               height: context.height * 0.035,
             ),
-            buildInputForm(context,
+            InputForm(
                 isPassword: isPassword,
                 controller: passwordController,
                 validate: (String value) {},
@@ -83,7 +86,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             SizedBox(
               height: context.height * 0.035,
             ),
-            buildInputForm(context,
+            InputForm(
                 isPassword: isPassword,
                 controller: confirmPasswordController,
                 validate: (String value) {},

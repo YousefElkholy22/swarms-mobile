@@ -1,3 +1,4 @@
+import 'package:evnto/features/authentcation/view/pages/forget_password_screen.dart';
 import 'package:evnto/features/authentcation/view/pages/login_screen.dart';
 import 'package:evnto/features/authentcation/view/pages/register_screen.dart';
 import 'core/localization/generated/l10n.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         scrollBehavior: ScrollConfiguration.of(context).copyWith(
           physics: const BouncingScrollPhysics(),
         ),
-        home: const RegisterScreen(),
+        home: const ForgetPasswordScreen(),
       ),
     );
   }

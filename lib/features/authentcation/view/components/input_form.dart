@@ -2,20 +2,34 @@ import 'package:evnto/core/styles/app_colors.dart';
 import 'package:evnto/core/styles/app_fonts.dart';
 import 'package:flutter/material.dart';
 
-Widget buildInputForm(
-  BuildContext context, {
+// ignore: must_be_immutable
+class InputForm extends StatelessWidget {
+  InputForm({
+    super.key,
+    required this.controller,
+    required this.validate,
+    required this.hint,
+    required this.type,
+    required this.width,
+    this.suffix,
+    this.height,
+    required this.isPassword,
+  });
+
   Color backgroundColor =
-      const Color.from(red: 250, green: 250, blue: 250, alpha: 1),
-  required TextEditingController controller,
-  required Function validate,
-  required String hint,
-  required TextInputType type,
-  required double width,
-  bool isPassword = false,
-  Widget? suffix,
-  double? height,
-}) =>
-    Container(
+      const Color.from(red: 250, green: 250, blue: 250, alpha: 1);
+  final TextEditingController controller;
+  final Function validate;
+  final String hint;
+  final TextInputType type;
+  final double width;
+  bool isPassword = false;
+  Widget? suffix;
+  double? height;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
       height: height,
       width: width,
       clipBehavior: Clip.hardEdge,
@@ -57,3 +71,5 @@ Widget buildInputForm(
         ),
       ),
     );
+  }
+}

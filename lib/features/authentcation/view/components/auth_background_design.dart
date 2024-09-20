@@ -3,13 +3,20 @@ import 'package:evnto/core/styles/app_colors.dart';
 import 'package:evnto/core/styles/app_fonts.dart';
 import 'package:flutter/material.dart';
 
-Widget buildAuthBackground(
-  BuildContext context, {
-  required List<Widget> widgets,
-  required String title,
-  required VoidCallback fun,
-}) =>
-    Column(
+class AuthLayout extends StatelessWidget {
+  const AuthLayout(
+      {super.key,
+      required this.fun,
+      required this.title,
+      required this.widgets});
+
+  final VoidCallback fun;
+  final String title;
+  final List<Widget> widgets;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
       children: [
         Stack(
           children: [
@@ -71,3 +78,5 @@ Widget buildAuthBackground(
         )
       ],
     );
+  }
+}
