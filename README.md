@@ -167,6 +167,15 @@ README.md
  <img src="https://github.com/user-attachments/assets/13f6b75e-7904-486c-8ef8-28b656129d3b" width="200" />
 </p>
 
+### 3. Questions
+<p align="center">
+ <img src="https://github.com/user-attachments/assets/b64b939b-e48e-4adf-bacd-f356a24df587" width="200" />
+ <img src="https://github.com/user-attachments/assets/a0262d94-183d-4c81-b39e-cb8601041d4b" width="200" />
+ <img src="https://github.com/user-attachments/assets/d15865f1-99ce-43e8-af33-ba24cc67ae2d" width="200" />
+</p>
+
+
+
 ## ✔️ Demo
 
 Soon...
