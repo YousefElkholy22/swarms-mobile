@@ -1,3 +1,5 @@
+import 'package:evnto/features/questions/data/models/question_entity.dart';
+
 import '../../features/welcome/data/models/onboarding_entity.dart';
 import '../localization/generated/l10n.dart';
 
@@ -19,7 +21,6 @@ class AppConstants {
     ),
   ];
 
-  static var onboardingButtons;
 }
 
 class PrefsKeys {

@@ -36,6 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "invalidPasswordMessage":
             MessageLookupByLibrary.simpleMessage("Your password is short"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
         "onboardingSubtitle1": MessageLookupByLibrary.simpleMessage(
             "Get real-time updates on events and activities so you can make the most of your time"),
         "onboardingSubtitle2": MessageLookupByLibrary.simpleMessage(
@@ -48,6 +49,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "-------------------------------------- onboarding_comment ------------------------------------"),
         "passwordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("Passwords do not match"),
+        "questions_comment": MessageLookupByLibrary.simpleMessage(
+            "-------------------------------------- questions_comment ------------------------------------"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "start": MessageLookupByLibrary.simpleMessage("Start"),

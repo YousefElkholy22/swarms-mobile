@@ -1,7 +1,6 @@
-import 'package:evnto/core/styles/app_colors.dart';
+import 'package:evnto/features/shared/view/components/shared_back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../bloc/onboarding_bloc.dart';
 
@@ -16,24 +15,10 @@ class CustomBackButton extends StatelessWidget {
         if (bloc.currentIndex == 0) {
           return const SizedBox.shrink();
         } else {
-          return InkWell(
-            onTap: () {
+          return SharedBackButton(
+            onPressed: () {
               bloc.backButton();
             },
-            child: Container(
-              height: 46.h,
-              width: 46.h,
-              decoration: BoxDecoration(
-                border: Border.all(color: AppColors.blue),
-                color: Colors.white,
-                shape: BoxShape.circle,
-              ),
-              child:  Icon(
-                Icons.arrow_back_rounded,
-                color: AppColors.blue,
-                size: 22.sp,
-              ),
-            ),
           );
         }
       },

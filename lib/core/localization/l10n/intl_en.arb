@@ -21,5 +21,10 @@
     "skip": "Skip",
     "start": "Start",
     "login": "Login",
-    "signUp": "Sign Up"
+    "signUp": "Sign Up",
+
+    "questions_comment": "-------------------------------------- questions_comment ------------------------------------",
+    "next": "Next"
+
+
 }

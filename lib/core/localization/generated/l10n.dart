@@ -259,6 +259,26 @@ class S {
       args: [],
     );
   }
+
+  /// `-------------------------------------- questions_comment ------------------------------------`
+  String get questions_comment {
+    return Intl.message(
+      '-------------------------------------- questions_comment ------------------------------------',
+      name: 'questions_comment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
