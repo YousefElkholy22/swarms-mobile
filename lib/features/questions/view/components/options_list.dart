@@ -14,12 +14,10 @@ class OptionsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if(isMultiple){
-      return OptionListView(options: options);
-    } else {
+    if (isMultiple) {
       return MultipleOptionsGridView(options: options);
+    } else {
+      return OptionListView(options: options);
     }
   }
 }
-
-

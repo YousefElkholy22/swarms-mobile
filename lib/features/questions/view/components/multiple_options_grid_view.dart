@@ -17,13 +17,14 @@ class MultipleOptionsGridView extends StatelessWidget {
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         childAspectRatio: 164 / 116,
-        mainAxisSpacing: 20.h,
-        crossAxisSpacing: 60.w,
+        mainAxisSpacing: 10.h,
+        crossAxisSpacing: 30.w,
       ),
       itemBuilder: (_, index) {
         return OptionCard(
           option: options[index],
           index: index,
+          isCenterText: true,
         );
       },
     );

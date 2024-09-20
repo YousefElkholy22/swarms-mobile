@@ -24,13 +24,18 @@ class QuestionsBody extends StatelessWidget {
     final bloc = context.read<QuestionCubit>();
     return Column(
       children: [
-        Text(
-          question.question,
-          style: AppFonts.darkGrey32Bold,
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.h),
+          child: Text(
+            question.question,
+            style: AppFonts.darkGrey32Bold,
+            textAlign: TextAlign.center,
+            maxLines: 2,
+          ),
         ),
-        32.ph,
+        22.ph,
         SizedBox(
-          height: 510.h,
+          height: 488.h,
           child: OptionsList(
             isMultiple: question.isMultiple,
             options: question.options,
@@ -42,20 +47,23 @@ class QuestionsBody extends StatelessWidget {
           builder: (context, state) {
             return Align(
               alignment: Alignment.centerRight,
-              child: PublicButton(
-                width: 100.w,
-                onPressed: bloc.isNextButtonEnabled
-                    ? () {
-                        bloc.questionAnswered(() {
-                          Navigator.pushNamedAndRemoveUntil(
-                            context,
-                            AppRoutes.home,
-                            (route) => false,
-                          );
-                        });
-                      }
-                    : null,
-                title: S.of(context).next,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.w),
+                child: PublicButton(
+                  width: 110.w,
+                  onPressed: bloc.isNextButtonEnabled
+                      ? () {
+                          bloc.questionAnswered(() {
+                            Navigator.pushNamedAndRemoveUntil(
+                              context,
+                              AppRoutes.home,
+                              (route) => false,
+                            );
+                          });
+                        }
+                      : null,
+                  title: S.of(context).next,
+                ),
               ),
             );
           },

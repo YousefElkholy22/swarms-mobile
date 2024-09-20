@@ -17,7 +17,7 @@ class QuestionsPage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.w),
+          padding: EdgeInsets.symmetric(vertical: 48.h),
           child: Column(
             children: [
               const QuestionsBar(),

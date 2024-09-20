@@ -17,6 +17,7 @@ class QuestionCubit extends Cubit<QuestionState> {
   void backButton() {
     if (questionPage == 1) return;
     questionPage--;
+    isNextButtonEnabled = true;
     emit(QuestionState.questionBack(questionPage));
   }
 
@@ -26,6 +27,7 @@ class QuestionCubit extends Cubit<QuestionState> {
     } else {
       questionPage++;
       emit(QuestionState.questionAnswered(questionPage));
+    _nextButtonEnable();
     }
   }
 
@@ -36,21 +38,19 @@ class QuestionCubit extends Cubit<QuestionState> {
     emit(QuestionState.optionSelected(index));
   }
 
-  void _nextButtonEnable() {
-    if (questions[questionPage - 1]
-        .selectedOptions
-        .firstWhere((element) => element)) {
-      isNextButtonEnabled = true;
-    } else {
-      isNextButtonEnabled = false;
-    }
-    emit(QuestionState.nextButtonEnable(isNextButtonEnabled));
-  }
-
   void _init() {
     questionPage = 1;
     questions = AppDummy.questions;
     questionsProgress = questionPage / questions.length;
     isNextButtonEnabled = false;
+  }
+
+  void _nextButtonEnable() {
+    if (questions[questionPage - 1].selectedOptions.contains(true)) {
+      isNextButtonEnabled = true;
+    } else {
+      isNextButtonEnabled = false;
+    }
+    emit(QuestionState.nextButtonEnable(isNextButtonEnabled));
   }
 }

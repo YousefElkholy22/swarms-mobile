@@ -15,11 +15,12 @@ class OptionListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
       itemCount: options.length,
-      separatorBuilder: (_, __) => 20.ph,
+      separatorBuilder: (_, __) => 10.ph,
       itemBuilder: (context, index) {
         return OptionCard(
           option: options[index],
           index: index,
+          
         );
       },
     );

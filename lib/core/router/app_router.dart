@@ -4,6 +4,7 @@ import 'package:evnto/features/welcome/view/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../features/questions/bloc/question_cubit.dart';
 import '../../features/welcome/bloc/onboarding_bloc.dart';
 import 'app_routes.dart';
 
@@ -31,7 +32,10 @@ class RouteGenerate {
       case AppRoutes.questions:
         return MaterialPageRoute(
           settings: routeSettings,
-          builder: (_) => const QuestionsPage(),
+          builder: (_) => BlocProvider(
+            create: (context) => QuestionCubit(),
+            child: const QuestionsPage(),
+          ),
         );
 
       default:

@@ -51,7 +51,7 @@ class AppFonts {
   );
 
   static final TextStyle white20Normal = TextStyle(
-    fontSize: 22.sp,
+    fontSize: 20.sp,
     color: AppColors.white,
     fontWeight: FontWeight.normal,
   );
