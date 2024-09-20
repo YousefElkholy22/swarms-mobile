@@ -1,6 +1,7 @@
-import 'package:evnto/features/authentcation/view/pages/forget_password_screen.dart';
-import 'package:evnto/features/authentcation/view/pages/login_screen.dart';
-import 'package:evnto/features/authentcation/view/pages/register_screen.dart';
+
+import 'package:evnto/core/router/app_routes.dart';
+
+
 import 'core/localization/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(360, 690),
+      designSize: const Size(428, 926),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Evnto',
@@ -32,7 +33,9 @@ class MyApp extends StatelessWidget {
         scrollBehavior: ScrollConfiguration.of(context).copyWith(
           physics: const BouncingScrollPhysics(),
         ),
-        home: const ForgetPasswordScreen(),
+        // home: const OnboardingPage(),
+        initialRoute: AppRoutes.onboarding,
+
       ),
     );
   }

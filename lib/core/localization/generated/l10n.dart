@@ -139,6 +139,126 @@ class S {
       args: [],
     );
   }
+
+  /// `-------------------------------------- onboarding_comment ------------------------------------`
+  String get onboarding_comment {
+    return Intl.message(
+      '-------------------------------------- onboarding_comment ------------------------------------',
+      name: 'onboarding_comment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Evnto`
+  String get evnto {
+    return Intl.message(
+      'Evnto',
+      name: 'evnto',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome To`
+  String get welcomeTo {
+    return Intl.message(
+      'Welcome To',
+      name: 'welcomeTo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Never Miss a Moment!`
+  String get onboardingTitle1 {
+    return Intl.message(
+      'Never Miss a Moment!',
+      name: 'onboardingTitle1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All Events in One Place!`
+  String get onboardingTitle2 {
+    return Intl.message(
+      'All Events in One Place!',
+      name: 'onboardingTitle2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get real-time updates on events and activities so you can make the most of your time`
+  String get onboardingSubtitle1 {
+    return Intl.message(
+      'Get real-time updates on events and activities so you can make the most of your time',
+      name: 'onboardingSubtitle1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Easily find and book events with our organized application.`
+  String get onboardingSubtitle2 {
+    return Intl.message(
+      'Easily find and book events with our organized application.',
+      name: 'onboardingSubtitle2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Register to easily access and stay updated on events!`
+  String get welcomeTitle {
+    return Intl.message(
+      'Register to easily access and stay updated on events!',
+      name: 'welcomeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skip`
+  String get skip {
+    return Intl.message(
+      'Skip',
+      name: 'skip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start`
+  String get start {
+    return Intl.message(
+      'Start',
+      name: 'start',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign Up`
+  String get signUp {
+    return Intl.message(
+      'Sign Up',
+      name: 'signUp',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

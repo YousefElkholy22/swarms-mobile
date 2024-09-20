@@ -1,17 +1,19 @@
-# Evnto
+# 🥇 Evnto
 
-## Table of Contents
+## 📊 Table of Contents
 
 1. [Overview](#Overview)
 2. [Features](#Features)
 3. [Project Architecture](#project-architecture)
 4. [UI Screens](#ui-screens)
 5. [Demo](#demo)
-5. [Contributing](#Contributing)
-6. [License](#License)
-7. [Contact](#Contact)
+6. [Contributing](#Contributing)
+7. [Running the App](#Running-the-App)
+8. [Running Tests](#Running-Tests)
+7. [License](#License)
+8. [Contact](#Contact)
 
-## Overview
+## 👌 Overview
 
 The "EVNTO" application was conceptualized to address the growing need for a centralized
 platform at Mansoura University, where students can easily book and follow activities organized by
@@ -19,9 +21,7 @@ various volunteer teams. This report summarizes the key findings from research c
 competitive applications and a survey among students, and it presents actionable recommendations
 for the development of the EVNTO application.
 
-Example:
-
-## Features
+## 🔥 Features
 ### 1. User Features
 
 #### 1.1 Email and Password Registration
@@ -116,7 +116,7 @@ Example:
 - Description: Provides admins with insights into event attendance, engagement, and feedback. This helps in data-driven decision-making and improving future events.
 
 
-## Project Architecture
+## 🏗️ Project Architecture
 
 ```
 lib/
@@ -143,6 +143,8 @@ lib/
 │       ├── bloc/ 
 │       ├── data/ 
 │       │   ├── models/ 
+│       │   │   ├── Entites/ 
+│       │   │   └── DTOs/
 │       │   └── repos/
 │       └── view/
 │           ├── components/ 
@@ -152,15 +154,25 @@ README.md
 ```
 
 
-## UI Screens
+## 🌙 UI Screens
+### 1. Splash
+<p align="center">
+ <img src="https://github.com/user-attachments/assets/4f73ba27-2de5-4fc5-b0a3-858afae4f9aa" width="200" />
+</p>
+
+### 2. Onboarding
+<p align="center">
+ <img src="https://github.com/user-attachments/assets/da514af4-2796-42bd-934f-59326e046a04" width="200" />
+ <img src="https://github.com/user-attachments/assets/8c40a21f-43c1-4714-ac47-72832bfac748" width="200" />
+ <img src="https://github.com/user-attachments/assets/13f6b75e-7904-486c-8ef8-28b656129d3b" width="200" />
+</p>
+
+## ✔️ Demo
+
 Soon...
 
-## Demo
 
-Soon...
-
-
-## Contributing
+## ⛑️ Contributing
 
 Contributions are welcome!
 
@@ -170,12 +182,70 @@ Contributions are welcome!
 4. Push to the branch (`git push origin feature-branch`).
 5. Create a new Pull Request.
 
+## 🚀 Running the App
 
-## License
+How to run the app on different platforms (Android, iOS).
+
+### Android
+Ensure you have an Android emulator running or an Android device connected.
+Run the following command:
+
+### IOS
+Ensure you have an iOS simulator running or an iOS device connected.
+Run the following command:
+
+### Steps
+
+1. Clone the repository
+
+```sh
+git clone https://github.com/swarmsTeam/swarms-mobile.git
+cd swarms-mobile
+```
+
+2. Install dependencies:
+
+```sh
+flutter pub get
+```
+
+3. Run the application:
+
+```sh
+flutter run
+```
+
+## 🔧 Running Tests
+
+How to run the unit tests
+
+### Steps
+
+1. Clone the repository
+
+```sh
+git clone https://github.com/swarmsTeam/swarms-mobile.git
+cd swarms-mobile
+```
+
+2. Install dependencies:
+
+```sh
+flutter pub get
+```
+
+3. Run the tests:
+
+```sh
+flutter test
+```
+
+
+## 📁 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Contact
+## ▶️ Contact
 
 If you have any questions, feel free to contact us:
 

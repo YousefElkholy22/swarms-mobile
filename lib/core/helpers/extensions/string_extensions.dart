@@ -76,9 +76,10 @@ extension PhoneNumberValidator on String {
 
 extension StringSecured on String {
   String get secured {
+    if (length < 4) return this;
     StringBuffer str = StringBuffer();
     str.write(substring(0, 2));
-    for (int i = 0; i < length; i++) {
+    for (int i = 2; i < length - 2; i++) {
       str.write("*");
     }
     str.write(substring(length - 2, length));
