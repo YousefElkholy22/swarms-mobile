@@ -14,11 +14,10 @@ class HomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
-      expandedHeight: 0.25.sh,
+      expandedHeight: 0.24.sh,
       floating: false,
       pinned: true,
       backgroundColor: AppColors.purple,
-      // title: const AppBarTitle(),
       automaticallyImplyLeading: false,
       bottom: PreferredSize(
         preferredSize: Size.fromHeight(60.h),

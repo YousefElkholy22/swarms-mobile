@@ -1,3 +1,5 @@
+import 'package:hugeicons/hugeicons.dart';
+
 import '../../../../../core/helpers/extensions/sizedbox_extensions.dart';
 import '../../../../../core/router/app_routes.dart';
 import '../../../../../core/styles/app_colors.dart';
@@ -44,7 +46,7 @@ class AppBarTitle extends StatelessWidget {
                 ),
                 child: Center(
                   child: Icon(
-                    Iconsax.notification,
+                    HugeIcons.strokeRoundedNotification02,
                     size: 24.r,
                     color: AppColors.darkGrey,
                   ),

@@ -2,6 +2,7 @@ import 'package:evnto/core/helpers/extensions/sizedbox_extensions.dart';
 import 'package:evnto/core/widgets/public_text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hugeicons/hugeicons.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../../core/localization/generated/l10n.dart';
@@ -48,7 +49,7 @@ class _SearchAppbarState extends State<SearchAppbar> {
          16.pw,
           InkWell(
             onTap: () {
-              Navigator.pushNamed(context, AppRoutes.notifications);
+              Navigator.pushNamed(context, AppRoutes.filters);
             },
             child: Container(
               height: 60.r,
@@ -59,7 +60,7 @@ class _SearchAppbarState extends State<SearchAppbar> {
               ),
               child: Center(
                 child: Icon(
-                  Iconsax.filter,
+                  HugeIcons.strokeRoundedFilterHorizontal,
                   size: 24.r,
                   color: AppColors.darkGrey,
                 ),
