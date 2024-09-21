@@ -26,6 +26,10 @@ class Assets {
   /// assets/fonts/quicksand/Quicksand-SemiBold.ttf
   static const String fontsQuicksandQuicksandSemiBold = "assets/fonts/quicksand/Quicksand-SemiBold.ttf";
 
+  /// Assets for iconsAi
+  /// assets/icons/ai.svg
+  static const String iconsAi = "assets/icons/ai.svg";
+
   /// Assets for iconsAppIcon
   /// assets/icons/app_icon.png
   static const String iconsAppIcon = "assets/icons/app_icon.png";
@@ -41,6 +45,18 @@ class Assets {
   /// Assets for iconsLayer12x
   /// assets/icons/Layer_1@2x.png
   static const String iconsLayer12x = "assets/icons/Layer_1@2x.png";
+
+  /// Assets for imagesCis
+  /// assets/images/cis.png
+  static const String imagesCis = "assets/images/cis.png";
+
+  /// Assets for imagesIeee
+  /// assets/images/ieee.png
+  static const String imagesIeee = "assets/images/ieee.png";
+
+  /// Assets for imagesMl
+  /// assets/images/ml.png
+  static const String imagesMl = "assets/images/ml.png";
 
   /// Assets for imagesOnboarding1
   /// assets/images/onboarding1.png

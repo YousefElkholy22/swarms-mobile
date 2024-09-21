@@ -1,3 +1,4 @@
+import 'package:evnto/features/home/view/pages/home_page.dart';
 import 'package:evnto/features/questions/view/pages/questions_page.dart';
 import 'package:evnto/features/welcome/view/pages/onboarding_page.dart';
 import 'package:evnto/features/welcome/view/pages/welcome_page.dart';
@@ -36,6 +37,13 @@ class RouteGenerate {
             create: (context) => QuestionCubit(),
             child: const QuestionsPage(),
           ),
+        );
+
+      /// Home
+      case AppRoutes.home:
+        return MaterialPageRoute(
+          settings: routeSettings,
+          builder: (_) => const HomePage(),
         );
 
       default:
