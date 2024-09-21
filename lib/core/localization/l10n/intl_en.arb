@@ -7,5 +7,24 @@
     "enterYourName": "Please, Enter Your Name",
     "invalidNameMeg": "Your name is short",
     "passwordsDoNotMatch": "Passwords do not match",
-    "yourNameIsTooShort": "Your name is too short"
+    "yourNameIsTooShort": "Your name is too short",
+
+    
+    "onboarding_comment": "-------------------------------------- onboarding_comment ------------------------------------",
+    "evnto": "Evnto",
+    "welcomeTo": "Welcome To",
+    "onboardingTitle1": "Never Miss a Moment!",
+    "onboardingTitle2": "All Events in One Place!",
+    "onboardingSubtitle1": "Get real-time updates on events and activities so you can make the most of your time",
+    "onboardingSubtitle2": "Easily find and book events with our organized application.",
+    "welcomeTitle": "Register to easily access and stay updated on events!",
+    "skip": "Skip",
+    "start": "Start",
+    "login": "Login",
+    "signUp": "Sign Up",
+
+    "questions_comment": "-------------------------------------- questions_comment ------------------------------------",
+    "next": "Next"
+
+
 }

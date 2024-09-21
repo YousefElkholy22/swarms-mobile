@@ -28,16 +28,37 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please, Enter Your Name"),
         "enterYourPassword":
             MessageLookupByLibrary.simpleMessage("Please, Enter Your Password"),
+        "evnto": MessageLookupByLibrary.simpleMessage("Evnto"),
         "invalidEmailMessage": MessageLookupByLibrary.simpleMessage(
             "Your email address is incorrect"),
         "invalidNameMeg":
             MessageLookupByLibrary.simpleMessage("Your name is short"),
         "invalidPasswordMessage":
             MessageLookupByLibrary.simpleMessage("Your password is short"),
+        "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "onboardingSubtitle1": MessageLookupByLibrary.simpleMessage(
+            "Get real-time updates on events and activities so you can make the most of your time"),
+        "onboardingSubtitle2": MessageLookupByLibrary.simpleMessage(
+            "Easily find and book events with our organized application."),
+        "onboardingTitle1":
+            MessageLookupByLibrary.simpleMessage("Never Miss a Moment!"),
+        "onboardingTitle2":
+            MessageLookupByLibrary.simpleMessage("All Events in One Place!"),
+        "onboarding_comment": MessageLookupByLibrary.simpleMessage(
+            "-------------------------------------- onboarding_comment ------------------------------------"),
         "passwordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("Passwords do not match"),
+        "questions_comment": MessageLookupByLibrary.simpleMessage(
+            "-------------------------------------- questions_comment ------------------------------------"),
+        "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
+        "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+        "start": MessageLookupByLibrary.simpleMessage("Start"),
         "validators_comment": MessageLookupByLibrary.simpleMessage(
             "------------------- validators_comment -------------------"),
+        "welcomeTitle": MessageLookupByLibrary.simpleMessage(
+            "Register to easily access and stay updated on events!"),
+        "welcomeTo": MessageLookupByLibrary.simpleMessage("Welcome To"),
         "yourNameIsTooShort":
             MessageLookupByLibrary.simpleMessage("Your name is too short")
       };

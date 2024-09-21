@@ -59,12 +59,16 @@ dependencies:
   sqflite: ^2.3.3+1
   syncfusion_flutter_datepicker: ^26.2.8
   shimmer: ^3.0.0
+  bloc_test: ^9.1.7
 
 
 dev_dependencies:
+  flutter_lints: ^4.0.0
+
+  # Testing
+  mockito: ^5.4.4
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
 
   # Code generation
   json_serializable: ^6.7.1
@@ -78,19 +82,21 @@ flutter:
   #  - assets/images/
     - assets/icons/
     - assets/designs/
-  # fonts:
-  #   - family: Inter
-  #     fonts:
-  #       - asset: assets\fonts\inter\Inter-Light.ttf
-  #         weight: 300
-  #       - asset: assets\fonts\inter\Inter-Regular.ttf
-  #         weight: 400
-  #       - asset: assets\fonts\inter\Inter-Medium.ttf
-  #         weight: 500
-  #       - asset: assets\fonts\inter\Inter-SemiBold.ttf
-  #         weight: 600
-  #       - asset: assets\fonts\inter\Inter-Bold.ttf
-  #         weight: 700
+    - assets/fonts/
+
+  fonts:
+    - family: Quicksand
+      fonts:
+        - asset: assets\fonts\quicksand\Quicksand-Light.ttf
+          weight: 300
+        - asset: assets\fonts\quicksand\Quicksand-Regular.ttf
+          weight: 400
+        - asset: assets\fonts\quicksand\Quicksand-Medium.ttf
+          weight: 500
+        - asset: assets\fonts\quicksand\Quicksand-SemiBold.ttf
+          weight: 600
+        - asset: assets\fonts\quicksand\Quicksand-Bold.ttf
+          weight: 700
 
 flutter_intl:
   enabled: true
@@ -99,22 +105,22 @@ flutter_intl:
 
 flutter_assets:
   assets_path: assets/
-  output_path: lib/resources/constants/
+  output_path: lib/core/constants/
   filename: app_assets.dart
   field_prefix:
 
-# flutter_native_splash:
-#   image: assets/images/logo_500.png
-#   color: "#105161"
-#   android: true
-#   ios: true
-#   android_12:
-#     image: assets\images\splash_android_12.png
-#     color: "#ffffff"
+flutter_native_splash:
+  image: assets\images\splash_img.png
+  color: "#ffffff"
+  android: true
+  ios: true
+  android_12:
+    image: assets\images\splash_img.png
+    color: "#ffffff"
 
-# flutter_launcher_icons:
-#   android: true
-#   ios: true
-#   image_path: "assets/images/logo_foreground.png"
-#   adaptive_icon_backgorund: "#105161"
-#   adaptive_icon_foreground: "assets/images/logo_foreground.png"
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/app_icon.png"
+  adaptive_icon_backgorund: "#ffffff"
+  adaptive_icon_foreground: "assets/icons/app_icon.png"

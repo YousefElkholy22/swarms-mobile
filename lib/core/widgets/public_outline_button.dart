@@ -29,7 +29,7 @@ class PublicOutlineButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width ?? 0.5.sw,
+      width: width ?? 1.sw,
       child: OutlinedButton(
         onPressed: onPressed,
         style: OutlinedButton.styleFrom(
@@ -37,14 +37,14 @@ class PublicOutlineButton extends StatelessWidget {
           foregroundColor: titleColor,
           side: BorderSide(color: titleColor),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(borderRadius ?? 12.r),
+            borderRadius: BorderRadius.circular(borderRadius ?? 16.r),
           ),
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: verticalpadding ?? 16.h),
           child: Text(
             title,
-            style: AppFonts.black22SemiBold.copyWith(fontSize: titleSize),
+            style: AppFonts.blue16Bold,
           ),
         ),
       ),

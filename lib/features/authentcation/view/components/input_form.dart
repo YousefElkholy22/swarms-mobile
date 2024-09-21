@@ -17,6 +17,8 @@ class InputForm extends StatelessWidget {
   });
 
   Color backgroundColor = AppColors.white;
+  Color backgroundColor =
+      const Color.fromARGB(255, 250, 250, 250);
   final TextEditingController controller;
   final Function validate;
   final String hint;
