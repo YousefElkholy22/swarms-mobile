@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hugeicons/hugeicons.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../../../core/styles/app_colors.dart';
+import '../../../../../core/styles/app_colors.dart';
 
 class FavoriteIcon extends StatefulWidget {
   const FavoriteIcon({

@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../../../core/localization/generated/l10n.dart';
-import '../../../../core/router/app_routes.dart';
-import '../../../../core/styles/app_colors.dart';
+import '../../../../../core/localization/generated/l10n.dart';
+import '../../../../../core/router/app_routes.dart';
+import '../../../../../core/styles/app_colors.dart';
 
 class SearchAppbar extends StatefulWidget {
   const SearchAppbar({

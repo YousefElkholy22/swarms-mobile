@@ -1,6 +1,6 @@
 
 import 'package:carousel_slider/carousel_slider.dart';
-import '../../../../core/constants/app_dummy.dart';
+import '../../../../../core/constants/app_dummy.dart';
 import 'banner_card.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

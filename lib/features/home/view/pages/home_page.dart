@@ -3,9 +3,10 @@ import 'package:evnto/core/helpers/extensions/sizedbox_extensions.dart';
 import 'package:evnto/core/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 
-import '../components/events_banner.dart';
-import '../components/home_appbar.dart';
-import '../components/upcoming_events.dart';
+import '../../../../core/router/app_routes.dart';
+import '../components/home/events_banner.dart';
+import '../components/home/home_appbar.dart';
+import '../components/home/upcoming_events.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -23,13 +24,25 @@ class HomePage extends StatelessWidget {
             20.svph,
             EventsList(
               title: 'Upcoming Events',
-              seeAllOnTap: () {},
+              seeAllOnTap: () {
+                Navigator.pushNamed(context, AppRoutes.upcoming);
+              },
               events: AppDummy.events,
             ),
             10.svph,
             EventsList(
               title: "For You",
-              seeAllOnTap: () {},
+              seeAllOnTap: () {
+                Navigator.pushNamed(context, AppRoutes.forYou);
+              },
+              events: AppDummy.events,
+            ),
+            10.svph,
+            EventsList(
+              title: "All Events",
+              seeAllOnTap: () {
+                Navigator.pushNamed(context, AppRoutes.allEvents);
+              },
               events: AppDummy.events,
             ),
             20.svph,

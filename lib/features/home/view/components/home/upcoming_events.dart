@@ -2,11 +2,11 @@ import 'package:another_flushbar/flushbar.dart';
 import 'package:evnto/core/helpers/extensions/sizedbox_extensions.dart';
 import 'package:evnto/core/widgets/public_title_tile.dart';
 import 'package:evnto/features/home/data/event_entity.dart';
-import 'package:evnto/features/home/view/components/event_card.dart';
+import 'package:evnto/features/home/view/components/home/event_card.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/constants/app_dummy.dart';
+import '../../../../../core/constants/app_dummy.dart';
 
 class EventsList extends StatelessWidget {
   final String title;

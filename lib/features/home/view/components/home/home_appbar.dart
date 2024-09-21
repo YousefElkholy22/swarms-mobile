@@ -1,9 +1,9 @@
 import 'package:evnto/core/helpers/extensions/sizedbox_extensions.dart';
-import 'package:evnto/features/home/view/components/appbar_title.dart';
+import 'package:evnto/features/home/view/components/home/appbar_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/styles/app_colors.dart';
+import '../../../../../core/styles/app_colors.dart';
 import 'search_appbar.dart';
 
 class HomeAppBar extends StatelessWidget {

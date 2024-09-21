@@ -1,12 +1,12 @@
-import '../../../../core/helpers/extensions/sizedbox_extensions.dart';
-import '../../../../core/router/app_routes.dart';
-import '../../../../core/styles/app_colors.dart';
-import '../../../../core/widgets/public_circular_image.dart';
+import '../../../../../core/helpers/extensions/sizedbox_extensions.dart';
+import '../../../../../core/router/app_routes.dart';
+import '../../../../../core/styles/app_colors.dart';
+import '../../../../../core/widgets/public_circular_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../../../core/styles/app_fonts.dart';
+import '../../../../../core/styles/app_fonts.dart';
 
 class AppBarTitle extends StatelessWidget {
   const AppBarTitle({
