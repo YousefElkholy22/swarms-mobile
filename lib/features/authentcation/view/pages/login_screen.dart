@@ -82,7 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: context.height * 0.036,
                 ),
-                buildMainButton(context,
+                MainButton(
                     onpressd: () {},
                     background: AppColors.purple,
                     text: "Log In"),

@@ -108,7 +108,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             SizedBox(
               height: context.height * 0.06,
             ),
-            buildMainButton(context,
+            MainButton(
                 onpressd: () {}, background: AppColors.purple, text: "Sign Up"),
             SizedBox(
               height: context.height * 0.02,
