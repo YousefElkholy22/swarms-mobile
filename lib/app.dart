@@ -1,5 +1,5 @@
-import 'package:evnto/features/authentcation/view/pages/forget_password_screen.dart';
 import 'package:evnto/core/router/app_routes.dart';
+import 'package:evnto/features/authentcation/view/pages/otp_screen.dart';
 import 'core/localization/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -31,8 +31,8 @@ class MyApp extends StatelessWidget {
         scrollBehavior: ScrollConfiguration.of(context).copyWith(
           physics: const BouncingScrollPhysics(),
         ),
-        // home: const OnboardingPage(),
-        initialRoute: AppRoutes.home,
+        home: const OtpScreen(),
+        
 
       ),
     );
