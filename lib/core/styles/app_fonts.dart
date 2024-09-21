@@ -16,7 +16,13 @@ class AppFonts {
   static final TextStyle black16Normal = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeight.normal,
-    color: Colors.black,
+    color: AppColors.black,
+  );
+
+  static final TextStyle black18SemiBold = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColors.black,
   );
 
   static final TextStyle black20Bold = TextStyle(
@@ -80,6 +86,24 @@ class AppFonts {
     fontSize: 20.sp,
     color: AppColors.textBlack,
     fontWeight: FontWeight.normal,
+  );
+
+  static final TextStyle blue12Semibold = TextStyle(
+    fontSize: 12.sp,
+    color: AppColors.blue,
+    fontWeight: FontWeight.w600,
+  );
+
+  static final TextStyle grey14SemiBold = TextStyle(
+    fontSize: 14.sp,
+    color: AppColors.grey,
+    fontWeight: FontWeight.w600,
+  );
+
+  static final TextStyle grey16SemiBold = TextStyle(
+    fontSize: 16.sp,
+    color: AppColors.grey,
+    fontWeight: FontWeight.w600,
   );
 
   /// button fonts

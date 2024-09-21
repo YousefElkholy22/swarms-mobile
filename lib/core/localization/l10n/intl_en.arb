@@ -24,7 +24,11 @@
     "signUp": "Sign Up",
 
     "questions_comment": "-------------------------------------- questions_comment ------------------------------------",
-    "next": "Next"
+    "next": "Next",
+
+    "home_comment": "-------------------------------------- home_comment ------------------------------------",
+    "search": "Search",
+    "hi": "Hi"
 
 
 }

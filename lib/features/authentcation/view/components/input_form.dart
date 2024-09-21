@@ -17,7 +17,6 @@ class InputForm extends StatelessWidget {
   });
 
   Color backgroundColor = AppColors.white;
-
   final TextEditingController controller;
   final Function validate;
   final String hint;

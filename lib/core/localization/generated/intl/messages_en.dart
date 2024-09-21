@@ -29,6 +29,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterYourPassword":
             MessageLookupByLibrary.simpleMessage("Please, Enter Your Password"),
         "evnto": MessageLookupByLibrary.simpleMessage("Evnto"),
+        "hi": MessageLookupByLibrary.simpleMessage("Hi"),
+        "home_comment": MessageLookupByLibrary.simpleMessage(
+            "-------------------------------------- home_comment ------------------------------------"),
         "invalidEmailMessage": MessageLookupByLibrary.simpleMessage(
             "Your email address is incorrect"),
         "invalidNameMeg":
@@ -51,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Passwords do not match"),
         "questions_comment": MessageLookupByLibrary.simpleMessage(
             "-------------------------------------- questions_comment ------------------------------------"),
+        "search": MessageLookupByLibrary.simpleMessage("Search"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "start": MessageLookupByLibrary.simpleMessage("Start"),

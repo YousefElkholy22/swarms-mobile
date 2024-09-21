@@ -2,28 +2,30 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:iconsax/iconsax.dart';
 
 import '../styles/app_colors.dart';
-import '../styles/app_fonts.dart';
 
 enum ImageType { network, file, asset, none }
 
 class PublicCircularImage extends StatelessWidget {
   final String? image;
   final ImageType type;
+  final double? radius;
   const PublicCircularImage({
     super.key,
     this.image,
     this.type = ImageType.none,
+    this.radius,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 140.w,
-      width: 140.w,
+      height: (radius ?? 70).r * 2,
+      width: (radius ?? 70).r * 2,
       decoration: const BoxDecoration(
-        color: AppColors.blue,
+        color: AppColors.white,
         shape: BoxShape.circle,
       ),
       child: _getImage(),
@@ -45,9 +47,11 @@ class PublicCircularImage extends StatelessWidget {
 
   Widget _getNoneImage() {
     return Center(
-      child: Text(
-        "no image",
-        style: AppFonts.white16Normal,
+      child: Icon(
+        Iconsax.user,
+        color: AppColors.darkGrey,
+        size: (radius ?? 70).r * 2 - 20.r,
+
       ),
     );
   }
