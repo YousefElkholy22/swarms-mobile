@@ -9,6 +9,8 @@ class AppColors {
   static Color purple = HexColor("#7848FA");
 
   /// Secondary colors
+  static const lightBlue = Color(0xFFE8E4F3);
+  static const darkGrey = Color(0xFF7C7C7C);
   static const lightGrey = Color(0xFFDCDCDC);
 
   /// text colors

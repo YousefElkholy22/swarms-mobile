@@ -17,4 +17,14 @@ class AppRoutes {
 
   /// home
   static const String home = '/home';
+  static const String upcoming = '/upcoming';
+  static const String forYou = '/for-you';
+  static const String allEvents = '/all-events';
+  static const String filters = '/filters';
+  static const String search = '/search';
+  static const String eventDetails = '/event-details';
+
+  /// notifications
+  static const String notifications = '/notifications';
+  
 }

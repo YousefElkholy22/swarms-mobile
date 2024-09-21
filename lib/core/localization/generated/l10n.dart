@@ -279,6 +279,36 @@ class S {
       args: [],
     );
   }
+
+  /// `-------------------------------------- home_comment ------------------------------------`
+  String get home_comment {
+    return Intl.message(
+      '-------------------------------------- home_comment ------------------------------------',
+      name: 'home_comment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get search {
+    return Intl.message(
+      'Search',
+      name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hi`
+  String get hi {
+    return Intl.message(
+      'Hi',
+      name: 'hi',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
