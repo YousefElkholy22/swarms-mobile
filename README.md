@@ -185,6 +185,14 @@ README.md
 ### 5. Favorites
 <p align="center">
  <img src="https://github.com/user-attachments/assets/3364ea82-5e14-4204-b4f5-a7b2b5dd0eaa" width="200" />
+ <img src="https://github.com/user-attachments/assets/e1d1ee20-13e1-4a65-942e-fe884aa6c04e" width="200" />
+</p>
+
+### 6. Event Details
+<p align="center">
+ <img src="https://github.com/user-attachments/assets/1909d9dd-eb1f-462d-b7fb-7e5819b92c18" width="200" />
+ <img src="https://github.com/user-attachments/assets/c615aed6-4941-42e0-8fb4-b04d9772c219" width="200" />
+ <img src="https://github.com/user-attachments/assets/bca66c92-4796-4df2-8a0f-3fd86e000bbe" width="200" />
 </p>
 
 
