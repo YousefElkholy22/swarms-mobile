@@ -10,7 +10,7 @@ class PublicDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: color ?? AppColors.darkGrey,
+      color: color ?? AppColors.lightGrey,
       height: 0.8.h,
       width: width ?? 0.4.sw,
     );

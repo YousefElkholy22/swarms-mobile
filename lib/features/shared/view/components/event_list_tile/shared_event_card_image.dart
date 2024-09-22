@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/styles/app_colors.dart';
 import '../../../../../core/styles/app_fonts.dart';
-import '../../../../home/data/event_entity.dart';
 import '../../../../home/view/components/favoirte_icon.dart';
+import '../../../data/shared_event_entity.dart';
 
 class SharedEventCardImage extends StatelessWidget {
   final EventEntity event;

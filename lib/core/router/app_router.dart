@@ -1,3 +1,4 @@
+import 'package:evnto/features/event_details/view/pages/event_details_page.dart';
 import 'package:evnto/features/home/view/pages/all_events_page.dart';
 import 'package:evnto/features/home/view/pages/home_page.dart';
 import 'package:evnto/features/home/view/pages/upcoming_page.dart';
@@ -10,6 +11,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../features/home/view/pages/for_you_page.dart';
 import '../../features/questions/bloc/question_cubit.dart';
+import '../../features/shared/data/shared_event_entity.dart';
 import '../../features/welcome/bloc/onboarding_bloc.dart';
 import 'app_routes.dart';
 
@@ -68,6 +70,15 @@ class RouteGenerate {
         return MaterialPageRoute(
           settings: routeSettings,
           builder: (_) => const AllEventsPage(),
+        );
+
+        /// event details
+      case AppRoutes.eventDetails:
+        return MaterialPageRoute(
+          settings: routeSettings,
+          builder: (_) =>  EventDetailsPage(
+            event: routeSettings.arguments as EventEntity,
+          ),
         );
 
       default:

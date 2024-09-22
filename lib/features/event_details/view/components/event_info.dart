@@ -1,5 +1,4 @@
 import 'package:evnto/core/helpers/extensions/sizedbox_extensions.dart';
-import 'package:evnto/core/helpers/extensions/sliver_extensions.dart';
 import 'package:evnto/core/widgets/public_button.dart';
 import 'package:evnto/core/widgets/public_divider.dart';
 import 'package:evnto/features/shared/data/shared_event_entity.dart';
@@ -18,7 +17,7 @@ class EventInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: 240.h,
+      top: 200.h,
       right: 0,
       left: 0,
       bottom: 30.h,
@@ -30,35 +29,36 @@ class EventInfo extends StatelessWidget {
             top: Radius.circular(32.r),
           ),
         ),
-        child: CustomScrollView(
-          slivers: [
-            EventInfoNames(event: event).toSliver(),
-            20.svph,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            EventInfoNames(event: event),
+            20.ph,
             const PublicDivider(
               width: double.infinity,
-            ).toSliver(),
-            20.svph,
-            SharedEventCardDate(event: event).toSliver(),
-            8.svph,
+            ),
+            20.ph,
+            SharedEventCardDate(event: event),
+            8.ph,
             PublicButton(
               width: 160.w,
               title: "Add to Calendar",
               borderRadius: 32.r,
               titleSize: 12.sp,
               onPressed: () {},
-            ).toSliver(),
-            12.svph,
-            SharedEventCardLocation(location: event.location).toSliver(),
-            8.svph,
+            ),
+            12.ph,
+            SharedEventCardLocation(location: event.location),
+            8.ph,
             PublicButton(
               width: 160.w,
               title: "Get Location",
               borderRadius: 32.r,
               titleSize: 12.sp,
               onPressed: () {},
-            ).toSliver(),
-            24.svph,
-            EventInfoTabs(event: event).toSliver(),
+            ),
+            24.ph,
+            EventInfoTabs(event: event),
           ],
         ),
       ),

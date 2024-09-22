@@ -19,7 +19,7 @@ class EventInfoTabs extends StatelessWidget {
       length: 3,
       animationDuration: const Duration(milliseconds: 300),
       child: SizedBox(
-        height: 200.h,
+        height: 260.h,
         child: Column(
           children: [
             TabBar(
@@ -46,12 +46,12 @@ class EventInfoTabs extends StatelessWidget {
                 ),
               ],
             ),
-             Expanded(
+             const Expanded(
               child: TabBarView(
                 children:  [
-                  const DetailsView().toSliver(),
-                  const SpeakersView().toSliver(),
-                  const ReviewsView().toSliver(),
+                   DetailsView(),
+                   SpeakersView(),
+                   ReviewsView(),
                 ],
               ),
             ),

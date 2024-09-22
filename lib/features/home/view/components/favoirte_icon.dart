@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hugeicons/hugeicons.dart';
-import 'package:iconsax/iconsax.dart';
 
 import '../../../../core/styles/app_colors.dart';
 
 class FavoriteIcon extends StatefulWidget {
+  final double? iconSize;
+
   const FavoriteIcon({
     super.key,
+    this.iconSize,
   });
 
   @override
@@ -26,8 +28,7 @@ class _FavoriteIconState extends State<FavoriteIcon> {
         });
       },
       child: Container(
-        height: 40.w,
-        width: 40.w,
+        padding: EdgeInsets.all(10.h),
         decoration: const BoxDecoration(
           color: AppColors.lightBlue,
           shape: BoxShape.circle,
@@ -37,7 +38,7 @@ class _FavoriteIconState extends State<FavoriteIcon> {
            icon: _isFavorite
                 ? Icons.favorite_rounded
                 : HugeIcons.strokeRoundedFavourite,
-            size: 24.r,
+            size: widget.iconSize ?? 24.h,
             color: AppColors.blue,
           ),
         ),

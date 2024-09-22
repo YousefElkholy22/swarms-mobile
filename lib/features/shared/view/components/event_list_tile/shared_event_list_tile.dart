@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/helpers/extensions/sizedbox_extensions.dart';
-import '../../../../home/data/event_entity.dart';
 import '../../../../../core/styles/app_colors.dart';
 import '../../../../../core/styles/app_fonts.dart';
+import '../../../data/shared_event_entity.dart';
 import 'shared_event_card_date.dart';
 import 'shared_event_card_image.dart';
 import 'shared_event_card_location.dart';
