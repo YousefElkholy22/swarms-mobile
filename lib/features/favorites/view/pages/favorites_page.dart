@@ -22,13 +22,10 @@ class FavoritesPage extends StatelessWidget {
         child: Column(
           children: [
             20.ph,
-            const Expanded(
-              flex: 1,
-              child: FavoritesFilter(),
-            ),
+
+            const FavoritesFilter(),
             20.ph,
             Expanded(
-              flex: 9,
               child: ListView.builder(
                 itemCount: AppDummy.events.length,
                 itemBuilder: (_, index) {

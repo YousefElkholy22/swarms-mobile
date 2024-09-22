@@ -1,57 +1,59 @@
-import 'package:appinio_animated_toggle_tab/appinio_animated_toggle_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/styles/app_colors.dart';
+import 'toggle_card.dart';
 
-class FavoritesFilter extends StatelessWidget {
+class FavoritesFilter extends StatefulWidget {
   const FavoritesFilter({super.key});
 
   @override
+  State<FavoritesFilter> createState() => _FavoritesFilterState();
+}
+
+class _FavoritesFilterState extends State<FavoritesFilter> {
+  int selectedIndex = 0;
+
+  @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 60.h,
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20.w),
       child: Container(
-        padding: const EdgeInsets.all(4),
-        child: AppinioAnimatedToggleTab(
-          callback: (int i) {},
-          tabTexts: const [
-            'Upcoming',
-            'Past',
+        height: 60.h,
+        width: 380.w,
+        decoration: BoxDecoration(
+          color: AppColors.white,
+          borderRadius: BorderRadius.all(
+            Radius.circular(8.r),
+          ),
+          boxShadow: const [
+            BoxShadow(
+              color: AppColors.lightGrey,
+              spreadRadius: 1,
+              blurRadius: 5,
+              offset: Offset(0, 2),
+            ),
           ],
-          height: 54.h,
-          width: 388.w,
-          boxDecoration: BoxDecoration(
-            color: AppColors.white,
-            borderRadius: BorderRadius.all(
-              Radius.circular(8.r),
-            ),
-            boxShadow: const [
-              BoxShadow(
-                color: AppColors.lightGrey,
-                spreadRadius: 1,
-                blurRadius: 5,
-                offset: Offset(0, 2),
-              ),
-            ],
-          ),
-          animatedBoxDecoration: BoxDecoration(
-            color: AppColors.blue,
-            borderRadius: BorderRadius.all(
-              Radius.circular(6.r),
-            ),
-            border: Border.all(
-              color: Colors.grey,
-              width: 1,
-            ),
-          ),
-          activeStyle:  TextStyle(
-            color: AppColors.white,
-            fontSize: 18.sp,
-          ),
-          inactiveStyle:  TextStyle(
-            color: AppColors.black,
-            fontSize: 18.sp,
+        ),
+        child: Row(
+          children: List.generate(
+            2,
+            (index) {
+              bool isSelected = index == selectedIndex;
+              return Expanded(
+                child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      selectedIndex = index;
+                    });
+                  },
+                  child: ToggleCard(
+                    index: index,
+                    isSelected: isSelected,
+                  ),
+                ),
+              );
+            },
           ),
         ),
       ),
