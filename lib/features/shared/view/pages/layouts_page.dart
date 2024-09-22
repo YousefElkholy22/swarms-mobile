@@ -40,6 +40,9 @@ class _LayoutsPageState extends State<LayoutsPage> {
       body: SizedBox.expand(
         child: PageView(
           controller: pageController,
+          scrollBehavior: ScrollConfiguration.of(context).copyWith(
+            physics: const NeverScrollableScrollPhysics()
+          ),
           children: _containScreen,
         ),
       ),
