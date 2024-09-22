@@ -4,9 +4,9 @@ import 'package:evnto/core/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/router/app_routes.dart';
-import '../components/home/events_banner.dart';
-import '../components/home/home_appbar.dart';
-import '../components/home/upcoming_events.dart';
+import '../components/events_banner.dart';
+import '../components/home_appbar.dart';
+import '../components/upcoming_events.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

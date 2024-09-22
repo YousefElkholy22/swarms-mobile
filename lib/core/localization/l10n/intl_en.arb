@@ -28,7 +28,13 @@
 
     "home_comment": "-------------------------------------- home_comment ------------------------------------",
     "search": "Search",
-    "hi": "Hi"
+    "hi": "Hi",
+    "home": "Home",
+    "favorites": "Favorites",
+    "calendar": "Calendar",
+    "organizers": "Organizers",
+    "profile": "Profile"
+
 
 
 }

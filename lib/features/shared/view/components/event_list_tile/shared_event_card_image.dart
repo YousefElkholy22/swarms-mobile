@@ -3,15 +3,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/styles/app_colors.dart';
 import '../../../../../core/styles/app_fonts.dart';
-import '../../../data/event_entity.dart';
-import '../home/favoirte_icon.dart';
+import '../../../../home/data/event_entity.dart';
+import '../../../../home/view/components/favoirte_icon.dart';
 
-class EventCardImage extends StatelessWidget {
+class SharedEventCardImage extends StatelessWidget {
   final EventEntity event;
   final bool showEventType;
   final double? height;
   final double? width;
-  const EventCardImage({
+  const SharedEventCardImage({
     super.key,
     required this.event,
     this.height,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/constants/app_dummy.dart';
 import '../../../../core/styles/app_fonts.dart';
-import '../components/shared/event_list_tile.dart';
+import '../../../shared/view/components/event_list_tile/shared_event_list_tile.dart';
 
 class AllEventsPage extends StatelessWidget {
   const AllEventsPage({super.key});
@@ -20,7 +20,7 @@ class AllEventsPage extends StatelessWidget {
         child: ListView.builder(
           itemCount: AppDummy.events.length,
           itemBuilder: (_, index) {
-            return EventListTile(event: AppDummy.events[index]);
+            return SharedEventListTile(event: AppDummy.events[index]);
           },
         ),
       ),

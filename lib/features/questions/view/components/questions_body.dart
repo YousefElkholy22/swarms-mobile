@@ -35,7 +35,7 @@ class QuestionsBody extends StatelessWidget {
         ),
         22.ph,
         SizedBox(
-          height: 488.h,
+          height: 480.h,
           child: OptionsList(
             isMultiple: question.isMultiple,
             options: question.options,

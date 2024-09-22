@@ -176,11 +176,17 @@ README.md
 
 ### 4. Home
 <p align="center">
- <img src="https://github.com/user-attachments/assets/3c068779-c29c-49c1-9a3a-b277236ef71f" width="200" />
+ <img src="https://github.com/user-attachments/assets/91e0c716-ebf3-4924-b348-c8224ee7dcec" width="200" />
  <img src="https://github.com/user-attachments/assets/46c6e472-b603-4296-a8e3-33b114517895" width="200" />
  <img src="https://github.com/user-attachments/assets/ff526e92-9214-4191-b58e-e91b8e2fd51d" width="200" />
  <img src="https://github.com/user-attachments/assets/5ed60b4d-0f3d-45e2-8b7e-1a3c4305d54d" width="200" />
 </p>
+
+### 5. Favorites
+<p align="center">
+ <img src="https://github.com/user-attachments/assets/3364ea82-5e14-4204-b4f5-a7b2b5dd0eaa" width="200" />
+</p>
+
 
 
 

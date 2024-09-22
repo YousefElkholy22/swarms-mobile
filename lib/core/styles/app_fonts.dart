@@ -65,13 +65,13 @@ class AppFonts {
 
   static final TextStyle grey14Normal = TextStyle(
     fontSize: 14.sp,
-    color: AppColors.grey,
+    color: AppColors.darkGrey,
     fontWeight: FontWeight.normal,
   );
 
   static final TextStyle grey16Normal = TextStyle(
     fontSize: 16.sp,
-    color: AppColors.grey,
+    color: AppColors.darkGrey,
     fontWeight: FontWeight.normal,
   );
 
@@ -96,13 +96,13 @@ class AppFonts {
 
   static final TextStyle grey14SemiBold = TextStyle(
     fontSize: 14.sp,
-    color: AppColors.grey,
+    color: AppColors.darkGrey,
     fontWeight: FontWeight.w600,
   );
 
   static final TextStyle grey16SemiBold = TextStyle(
     fontSize: 16.sp,
-    color: AppColors.grey,
+    color: AppColors.darkGrey,
     fontWeight: FontWeight.w600,
   );
 

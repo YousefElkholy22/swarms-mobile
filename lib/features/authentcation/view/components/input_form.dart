@@ -62,7 +62,7 @@ class InputForm extends StatelessWidget {
               .copyWith(color: AppColors.black, fontSize: 17),
           decoration: InputDecoration(
               hintStyle: AppFonts.black16Normal
-                  .copyWith(color: AppColors.grey, fontSize: 17),
+                  .copyWith(color: AppColors.darkGrey, fontSize: 17),
               hintText: hint,
               suffixIcon: suffix,
               filled: true,

@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/helpers/extensions/sizedbox_extensions.dart';
-import '../../../data/event_entity.dart';
+import '../../../../home/data/event_entity.dart';
 import '../../../../../core/styles/app_colors.dart';
 import '../../../../../core/styles/app_fonts.dart';
-import 'event_card_date.dart';
-import 'event_card_image.dart';
-import 'event_card_location.dart';
+import 'shared_event_card_date.dart';
+import 'shared_event_card_image.dart';
+import 'shared_event_card_location.dart';
 
-class EventListTile extends StatelessWidget {
+class SharedEventListTile extends StatelessWidget {
   final EventEntity event;
-  const EventListTile({
+  const SharedEventListTile({
     super.key,
     required this.event,
   });
@@ -37,7 +37,7 @@ class EventListTile extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          EventCardImage(
+          SharedEventCardImage(
             event: event,
             showEventType: false,
             width: 132.w,
@@ -65,9 +65,9 @@ class EventListTile extends StatelessWidget {
                 style: AppFonts.black18SemiBold,
               ),
               10.ph,
-              EventCardDate(event: event, size: 14.sp,),
+              SharedEventCardDate(event: event, size: 14.sp,),
               10.ph,
-              EventCardLocation(location: event.location, size: 14.sp),
+              SharedEventCardLocation(location: event.location, size: 14.sp),
             ],
           ),
         ],

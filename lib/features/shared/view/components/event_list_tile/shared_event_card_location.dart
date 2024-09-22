@@ -6,10 +6,10 @@ import 'package:iconsax/iconsax.dart';
 import '../../../../../core/styles/app_colors.dart';
 import '../../../../../core/styles/app_fonts.dart';
 
-class EventCardLocation extends StatelessWidget {
+class SharedEventCardLocation extends StatelessWidget {
   final String location;
   final double? size;
-  const EventCardLocation({super.key, required this.location, this.size});
+  const SharedEventCardLocation({super.key, required this.location, this.size});
 
   @override
   Widget build(BuildContext context) {

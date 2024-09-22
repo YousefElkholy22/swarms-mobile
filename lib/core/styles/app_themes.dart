@@ -1,3 +1,4 @@
+import 'package:evnto/core/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -9,22 +10,26 @@ class AppThemes {
     fontFamily: "Quicksand",
 
     /// Colors
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: AppColors.white,
     colorScheme: ColorScheme.fromSeed(
-      seedColor: Colors.blue,
+      seedColor: AppColors.blue,
     ),
 
     /// App Bar Theme
     appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.white,
+      surfaceTintColor: AppColors.white,
       systemOverlayStyle: SystemUiOverlayStyle(
         statusBarBrightness: Brightness.light, // IOS
-        statusBarColor: Colors.white, // Andriod
+        statusBarColor: AppColors.white, // Andriod
         statusBarIconBrightness: Brightness.dark, // Android
       ),
     ),
 
     /// Card Theme
-    cardTheme: const CardTheme(color: Colors.white),
+    cardTheme: const CardTheme(
+      color: AppColors.white,
+      surfaceTintColor: AppColors.white
+    ),
   );
 }
