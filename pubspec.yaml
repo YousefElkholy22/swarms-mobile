@@ -63,6 +63,8 @@ dependencies:
   carousel_slider: ^5.0.0
   hugeicons: ^0.0.7
   persistent_bottom_nav_bar: ^6.2.1
+  appinio_animated_toggle_tab: ^1.0.3
+  bottom_navy_bar: ^6.1.0
 
 
 dev_dependencies:

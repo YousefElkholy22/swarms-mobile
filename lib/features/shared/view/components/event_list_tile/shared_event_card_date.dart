@@ -7,12 +7,12 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../../../../core/styles/app_colors.dart';
 import '../../../../../core/styles/app_fonts.dart';
-import '../../../data/event_entity.dart';
+import '../../../../home/data/event_entity.dart';
 
-class EventCardDate extends StatelessWidget {
+class SharedEventCardDate extends StatelessWidget {
   final EventEntity event;
   final double? size;
-  const EventCardDate({
+  const SharedEventCardDate({
     super.key,
     required this.event,
     this.size,

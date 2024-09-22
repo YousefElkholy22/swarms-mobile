@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../core/helpers/extensions/sizedbox_extensions.dart';
-import '../../../../../core/styles/app_colors.dart';
-import '../../../../../core/styles/app_fonts.dart';
-import '../../../data/event_entity.dart';
+import '../../../../core/helpers/extensions/sizedbox_extensions.dart';
+import '../../../../core/styles/app_colors.dart';
+import '../../../../core/styles/app_fonts.dart';
+import '../../data/event_entity.dart';
 
-import '../shared/event_card_date.dart';
-import '../shared/event_card_image.dart';
-import '../shared/event_card_location.dart';
+import '../../../shared/view/components/event_list_tile/shared_event_card_date.dart';
+import '../../../shared/view/components/event_list_tile/shared_event_card_image.dart';
+import '../../../shared/view/components/event_list_tile/shared_event_card_location.dart';
 
 class EventCard extends StatelessWidget {
   final EventEntity event;
@@ -35,7 +35,7 @@ class EventCard extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          EventCardImage(event: event),
+          SharedEventCardImage(event: event),
           10.ph,
           Text(
             event.name,
@@ -43,9 +43,9 @@ class EventCard extends StatelessWidget {
             style: AppFonts.black18SemiBold,
           ),
           10.ph,
-          EventCardDate(event: event),
+          SharedEventCardDate(event: event),
           10.ph,
-          EventCardLocation(location: event.location),
+          SharedEventCardLocation(location: event.location),
         ],
       ),
     );

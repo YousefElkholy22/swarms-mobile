@@ -5,7 +5,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 import '../../../calendar/view/calendar_page.dart';
-import '../../../favorites/view/favorites_page.dart';
+import '../../../favorites/view/pages/favorites_page.dart';
 import '../../../organizers/view/organizers_page.dart';
 import '../../../../../core/localization/generated/l10n.dart';
 import '../../../../../core/styles/app_colors.dart';
@@ -39,9 +39,6 @@ class _LayoutsPageState extends State<LayoutsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 0,
-      ),
       body: _containScreen[selectedIndex],
       bottomNavigationBar: PersistentTabView(
         context,
@@ -49,9 +46,8 @@ class _LayoutsPageState extends State<LayoutsPage> {
         screens: _containScreen,
         items: _navBarsItems(),
         handleAndroidBackButtonPress: true, // Default is true.
-        resizeToAvoidBottomInset: true,
+        resizeToAvoidBottomInset: false,
         stateManagement: true, // Default is true.
-        hideNavigationBarWhenKeyboardAppears: true,
         popBehaviorOnSelectedNavBarItemPress: PopBehavior.all,
         padding: EdgeInsets.only(top: 8.h),
         backgroundColor: AppColors.white,

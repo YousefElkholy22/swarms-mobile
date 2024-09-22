@@ -44,11 +44,11 @@ class RouteGenerate {
         );
 
       /// Home
-      // case AppRoutes.layouts:
-      //   return MaterialPageRoute(
-      //     settings: routeSettings,
-      //     builder: (_) => const LayoutsPage(),
-      //   );
+      case AppRoutes.layouts:
+        return MaterialPageRoute(
+          settings: routeSettings,
+          builder: (_) => const LayoutsPage(),
+        );
       case AppRoutes.home:
         return MaterialPageRoute(
           settings: routeSettings,

@@ -1,5 +1,6 @@
 import 'package:evnto/core/router/app_routes.dart';
 import 'package:evnto/features/authentcation/view/pages/otp_screen.dart';
+import 'package:evnto/features/favorites/view/pages/favorites_page.dart';
 import 'package:evnto/features/shared/view/pages/layouts_page.dart';
 import 'core/localization/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         scrollBehavior: ScrollConfiguration.of(context).copyWith(
           physics: const BouncingScrollPhysics(),
         ),
-        home: const LayoutsPage(),
+        initialRoute: AppRoutes.layouts,
         
 
       ),

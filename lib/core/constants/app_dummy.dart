@@ -1,7 +1,7 @@
 import 'package:evnto/core/constants/app_assets.dart';
 import 'package:evnto/features/home/data/event_bannar_entity.dart';
 import 'package:evnto/features/home/data/event_entity.dart';
-import 'package:evnto/features/home/view/components/home/event_card.dart';
+import 'package:evnto/features/home/view/components/event_card.dart';
 
 import '../../features/questions/data/models/question_entity.dart';
 
