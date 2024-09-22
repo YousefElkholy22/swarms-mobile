@@ -7,7 +7,7 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../../../../core/styles/app_colors.dart';
 import '../../../../../core/styles/app_fonts.dart';
-import '../../../../home/data/event_entity.dart';
+import '../../../data/shared_event_entity.dart';
 
 class SharedEventCardDate extends StatelessWidget {
   final EventEntity event;

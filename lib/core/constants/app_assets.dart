@@ -66,6 +66,14 @@ class Assets {
   /// assets/images/onboarding2.png
   static const String imagesOnboarding2 = "assets/images/onboarding2.png";
 
+  /// Assets for imagesSpeaker1
+  /// assets/images/speaker1.png
+  static const String imagesSpeaker1 = "assets/images/speaker1.png";
+
+  /// Assets for imagesSpeaker2
+  /// assets/images/speaker2.png
+  static const String imagesSpeaker2 = "assets/images/speaker2.png";
+
   /// Assets for imagesSplashImg
   /// assets/images/splash_img.png
   static const String imagesSplashImg = "assets/images/splash_img.png";
