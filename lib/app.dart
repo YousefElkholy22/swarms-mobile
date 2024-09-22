@@ -1,4 +1,5 @@
 import 'package:evnto/core/router/app_routes.dart';
+import 'package:evnto/features/authentcation/view/pages/change_password_screen.dart';
 import 'package:evnto/features/authentcation/view/pages/otp_screen.dart';
 import 'package:evnto/features/favorites/view/pages/favorites_page.dart';
 import 'package:evnto/features/shared/view/pages/layouts_page.dart';

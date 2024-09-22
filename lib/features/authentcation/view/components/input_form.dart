@@ -13,18 +13,21 @@ class InputForm extends StatelessWidget {
     required this.width,
     this.suffix,
     this.height,
+    this.onChanged,
     required this.isPassword,
   });
 
-  Color backgroundColor = AppColors.white;
   final TextEditingController controller;
   final Function validate;
   final String hint;
   final TextInputType type;
   final double width;
+  Function? onChanged;
   bool isPassword = false;
   Widget? suffix;
   double? height;
+
+  Color backgroundColor = AppColors.white;
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +48,9 @@ class InputForm extends StatelessWidget {
       ),
       child: Center(
         child: TextFormField(
+          onChanged: (value) {
+            onChanged!(value);
+          },
           obscureText: isPassword,
           keyboardType: type,
           controller: controller,
