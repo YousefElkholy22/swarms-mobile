@@ -73,7 +73,9 @@ class AuthLayout extends StatelessWidget {
               color: AppColors.white),
           child: Padding(
             padding: const EdgeInsets.all(14.0),
-            child: Column(children: widgets),
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: widgets),
           ),
         )
       ],
