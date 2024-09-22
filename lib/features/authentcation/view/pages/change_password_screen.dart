@@ -150,8 +150,16 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
           MainButton(
               onpressd: () {},
               background: AppColors.purple,
-              text: "Change Password")
+              text: "Change Password"),
+          SizedBox(
+            height: context.height * 0.16,
+          )
         ]),
+      ),
+      bottomSheet: Container(
+        width: double.infinity,
+        height: context.height * 0.04,
+        color: AppColors.white,
       ),
     );
   }
