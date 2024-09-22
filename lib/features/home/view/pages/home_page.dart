@@ -1,3 +1,4 @@
+import 'package:evnto/core/constants/app_assets.dart';
 import 'package:evnto/core/constants/app_dummy.dart';
 import 'package:evnto/core/helpers/extensions/sizedbox_extensions.dart';
 import 'package:evnto/core/styles/app_colors.dart';
@@ -48,6 +49,14 @@ class HomePage extends StatelessWidget {
             20.svph,
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: AppColors.white,
+        shape: const CircleBorder(),
+        onPressed: () {
+          Navigator.pushNamed(context, AppRoutes.chatpot);
+        },
+        child: Image.asset(Assets.iconsAi),
       ),
     );
   }

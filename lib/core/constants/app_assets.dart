@@ -46,6 +46,10 @@ class Assets {
   /// assets/icons/Layer_1@2x.png
   static const String iconsLayer12x = "assets/icons/Layer_1@2x.png";
 
+  /// Assets for imagesAlarm
+  /// assets/images/alarm.png
+  static const String imagesAlarm = "assets/images/alarm.png";
+
   /// Assets for imagesCis
   /// assets/images/cis.png
   static const String imagesCis = "assets/images/cis.png";

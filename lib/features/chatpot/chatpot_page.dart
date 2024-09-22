@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 
 import '../../../core/styles/app_fonts.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
+class ChatpotPage extends StatelessWidget {
+  const ChatpotPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Text(
-          'Profile Soon...',
+          'Chatpot Soon...',
           style: AppFonts.blue20Bold,
         ),
       ),
