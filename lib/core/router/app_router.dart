@@ -2,6 +2,7 @@ import 'package:evnto/features/home/view/pages/all_events_page.dart';
 import 'package:evnto/features/home/view/pages/home_page.dart';
 import 'package:evnto/features/home/view/pages/upcoming_page.dart';
 import 'package:evnto/features/questions/view/pages/questions_page.dart';
+import 'package:evnto/features/shared/view/pages/layouts_page.dart';
 import 'package:evnto/features/welcome/view/pages/onboarding_page.dart';
 import 'package:evnto/features/welcome/view/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
@@ -43,6 +44,11 @@ class RouteGenerate {
         );
 
       /// Home
+      // case AppRoutes.layouts:
+      //   return MaterialPageRoute(
+      //     settings: routeSettings,
+      //     builder: (_) => const LayoutsPage(),
+      //   );
       case AppRoutes.home:
         return MaterialPageRoute(
           settings: routeSettings,

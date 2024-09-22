@@ -6,7 +6,6 @@ import '../../../../../core/styles/app_colors.dart';
 import '../../../../../core/widgets/public_circular_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:iconsax/iconsax.dart';
 
 import '../../../../../core/styles/app_fonts.dart';
 
@@ -48,7 +47,7 @@ class AppBarTitle extends StatelessWidget {
                   child: Icon(
                     HugeIcons.strokeRoundedNotification02,
                     size: 24.r,
-                    color: AppColors.darkGrey,
+                    color: AppColors.grey,
                   ),
                 ),
               ),

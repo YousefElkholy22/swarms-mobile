@@ -65,7 +65,7 @@ class PublicDoubleButtonBottomSheet extends StatelessWidget {
               Expanded(
                 child: PublicOutlineButton(
                   title: noTitle ?? "No",
-                  titleColor: noColor ?? AppColors.grey,
+                  titleColor: noColor ?? AppColors.darkGrey,
                   titleSize: 14.sp,
                   onPressed: onNo ??
                       () {

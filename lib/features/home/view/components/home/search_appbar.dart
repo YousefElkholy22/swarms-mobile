@@ -62,7 +62,7 @@ class _SearchAppbarState extends State<SearchAppbar> {
                 child: Icon(
                   HugeIcons.strokeRoundedFilterHorizontal,
                   size: 24.r,
-                  color: AppColors.darkGrey,
+                  color: AppColors.grey,
                 ),
               ),
             ),

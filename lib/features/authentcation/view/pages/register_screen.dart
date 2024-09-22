@@ -81,7 +81,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       isPassword
                           ? Icons.visibility_outlined
                           : Icons.visibility_off_outlined,
-                      color: AppColors.grey,
+                      color: AppColors.darkGrey,
                     ))),
             SizedBox(
               height: context.height * 0.035,
@@ -103,7 +103,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       isPassword
                           ? Icons.visibility_outlined
                           : Icons.visibility_off_outlined,
-                      color: AppColors.grey,
+                      color: AppColors.darkGrey,
                     ))),
             SizedBox(
               height: context.height * 0.06,

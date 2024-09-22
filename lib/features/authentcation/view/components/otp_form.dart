@@ -41,7 +41,7 @@ class OtpForm extends StatelessWidget {
           style: AppFonts.black14Normal,
           decoration: InputDecoration(
               hintStyle: AppFonts.black14Normal
-                  .copyWith(color: AppColors.grey, fontSize: 17),
+                  .copyWith(color: AppColors.darkGrey, fontSize: 17),
               errorBorder: InputBorder.none,
               enabledBorder: InputBorder.none,
               focusedBorder: InputBorder.none,

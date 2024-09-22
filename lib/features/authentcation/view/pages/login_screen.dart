@@ -63,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         isPassword
                             ? Icons.visibility_outlined
                             : Icons.visibility_off_outlined,
-                        color: AppColors.grey,
+                        color: AppColors.darkGrey,
                       )),
                   isPassword: isPassword,
                 ),

@@ -17,6 +17,7 @@ class AppRoutes {
 
   /// home
   static const String home = '/home';
+  static const String layouts = '/layouts';
   static const String upcoming = '/upcoming';
   static const String forYou = '/for-you';
   static const String allEvents = '/all-events';

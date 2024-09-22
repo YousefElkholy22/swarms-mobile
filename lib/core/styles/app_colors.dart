@@ -10,7 +10,8 @@ class AppColors {
 
   /// Secondary colors
   static const lightBlue = Color(0xFFE8E4F3);
-  static const darkGrey = Color(0xFF7C7C7C);
+  static const darkGrey = Color(0xFF565656);
+  static const grey = Color(0xFF7C7C7C);
   static const lightGrey = Color(0xFFDCDCDC);
 
   /// text colors
@@ -20,7 +21,6 @@ class AppColors {
   /// Basic colors
   static const white = Colors.white;
   static const black = Colors.black;
-  static const grey = Colors.grey;
   static const red = Colors.red;
   static const green = Colors.green;
 

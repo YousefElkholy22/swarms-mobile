@@ -49,7 +49,7 @@ class PublicCircularImage extends StatelessWidget {
     return Center(
       child: Icon(
         Iconsax.user,
-        color: AppColors.darkGrey,
+        color: AppColors.grey,
         size: (radius ?? 70).r * 2 - 20.r,
 
       ),
