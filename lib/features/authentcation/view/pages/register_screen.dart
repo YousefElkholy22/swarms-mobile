@@ -7,6 +7,8 @@ import 'package:evnto/features/authentcation/view/components/main_button.dart';
 import 'package:evnto/features/authentcation/view/components/signup_button.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/router/app_routes.dart';
+
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
 
@@ -40,7 +42,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
         // back ground layout
         child: AuthLayout(
           title: 'Create Account!',
-          fun: () {},
+          fun: () {
+            Navigator.pop(context);
+          },
           widgets: [
             InputForm(
               controller: nameController,
@@ -81,7 +85,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       isPassword
                           ? Icons.visibility_outlined
                           : Icons.visibility_off_outlined,
-                      color: AppColors.grey,
+                      color: AppColors.darkGrey,
                     ))),
             SizedBox(
               height: context.height * 0.035,
@@ -103,13 +107,17 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       isPassword
                           ? Icons.visibility_outlined
                           : Icons.visibility_off_outlined,
-                      color: AppColors.grey,
+                      color: AppColors.darkGrey,
                     ))),
             SizedBox(
               height: context.height * 0.06,
             ),
             MainButton(
-                onpressd: () {}, background: AppColors.purple, text: "Sign Up"),
+                onpressd: () {
+                  Navigator.pushNamed(context, AppRoutes.verifyEmail);
+                },
+                background: AppColors.purple,
+                text: "Sign Up"),
             SizedBox(
               height: context.height * 0.02,
             ),
@@ -122,6 +130,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   style: AppFonts.black16Normal,
                 ),
                 InkWell(
+                  onTap: () {
+                    Navigator.pushReplacementNamed(context, AppRoutes.login);
+                  },
                   child: Text(
                     "Log in",
                     style: AppFonts.black20Bold.copyWith(fontSize: 16),

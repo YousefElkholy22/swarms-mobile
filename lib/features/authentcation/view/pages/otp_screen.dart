@@ -6,6 +6,8 @@ import 'package:evnto/features/authentcation/view/components/main_button.dart';
 import 'package:evnto/features/authentcation/view/components/otp_form.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/router/app_routes.dart';
+
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});
 
@@ -26,123 +28,130 @@ class _OtpScreenState extends State<OtpScreen> {
       backgroundColor: AppColors.purple,
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
-        child: AuthLayout(fun: () {}, title: "Enter Code", widgets: [
-          Row(
-            children: [
-              Text(
-                "Send code on ",
-                style: AppFonts.black16Normal,
+        child: AuthLayout(
+            fun: () {
+              Navigator.pop(context);
+            },
+            title: "Enter Code",
+            widgets: [
+              Row(
+                children: [
+                  Text(
+                    "Send code on ",
+                    style: AppFonts.black16Normal,
+                  ),
+                  Text(
+                    "reem11gmail.com",
+                    style: AppFonts.black16Normal.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: context.height * 0.03,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: 50,
+                    height: 50,
+                    child: OtpForm(
+                      controller: index0Controller,
+                      validate: (String value) {},
+                      onChanged: (value) {
+                        if (value.length == 1) {
+                          FocusScope.of(context).nextFocus();
+                        }
+                      },
+                    ),
+                  ),
+                  SizedBox(
+                    width: 50,
+                    height: 50,
+                    child: OtpForm(
+                      controller: index1Controller,
+                      validate: (String value) {},
+                      onChanged: (value) {
+                        if (value.length == 1) {
+                          FocusScope.of(context).nextFocus();
+                        }
+                      },
+                    ),
+                  ),
+                  SizedBox(
+                    width: 50,
+                    height: 50,
+                    child: OtpForm(
+                      controller: index2Controller,
+                      validate: (String value) {},
+                      onChanged: (value) {
+                        if (value.length == 1) {
+                          FocusScope.of(context).nextFocus();
+                        }
+                      },
+                    ),
+                  ),
+                  SizedBox(
+                    width: 50,
+                    height: 50,
+                    child: OtpForm(
+                      controller: index3Controller,
+                      validate: (String value) {},
+                      onChanged: (value) {
+                        if (value.length == 1) {
+                          FocusScope.of(context).nextFocus();
+                        }
+                      },
+                    ),
+                  ),
+                  SizedBox(
+                    width: 50,
+                    height: 50,
+                    child: OtpForm(
+                      controller: index4Controller,
+                      validate: (String value) {},
+                      onChanged: (value) {
+                        if (value.length == 1) {
+                          FocusScope.of(context).nextFocus();
+                        }
+                      },
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: context.height * 0.03,
+              ),
+              MainButton(
+                onpressd: () {
+                  Navigator.pushNamed(context, AppRoutes.resetPassword);
+                },
+                background: AppColors.purple,
+                text: 'Verify',
+              ),
+              SizedBox(
+                height: context.height * 0.02,
               ),
               Text(
-                "reemmagdy717gmail.com",
-                style: AppFonts.black16Normal.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
-              )
-            ],
-          ),
-          SizedBox(
-            height: context.height * 0.03,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SizedBox(
-                width: 50,
-                height: 50,
-                child: OtpForm(
-                  controller: index0Controller,
-                  validate: (String value) {},
-                  onChanged: (value) {
-                    if (value.length == 1) {
-                      FocusScope.of(context).nextFocus();
-                    }
-                  },
-                ),
+                "Resend Code in 12s",
+                style: AppFonts.grey14Normal,
               ),
               SizedBox(
-                width: 50,
-                height: 50,
-                child: OtpForm(
-                  controller: index1Controller,
-                  validate: (String value) {},
-                  onChanged: (value) {
-                    if (value.length == 1) {
-                      FocusScope.of(context).nextFocus();
-                    }
-                  },
-                ),
+                height: context.height * 0.02,
               ),
+              TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Resend Code",
+                    style: AppFonts.black20Bold
+                        .copyWith(color: AppColors.purple, fontSize: 12),
+                  )),
               SizedBox(
-                width: 50,
-                height: 50,
-                child: OtpForm(
-                  controller: index2Controller,
-                  validate: (String value) {},
-                  onChanged: (value) {
-                    if (value.length == 1) {
-                      FocusScope.of(context).nextFocus();
-                    }
-                  },
-                ),
+                height: context.height * 0.3,
               ),
-              SizedBox(
-                width: 50,
-                height: 50,
-                child: OtpForm(
-                  controller: index3Controller,
-                  validate: (String value) {},
-                  onChanged: (value) {
-                    if (value.length == 1) {
-                      FocusScope.of(context).nextFocus();
-                    }
-                  },
-                ),
-              ),
-              SizedBox(
-                width: 50,
-                height: 50,
-                child: OtpForm(
-                  controller: index4Controller,
-                  validate: (String value) {},
-                  onChanged: (value) {
-                    if (value.length == 1) {
-                      FocusScope.of(context).nextFocus();
-                    }
-                  },
-                ),
-              )
-            ],
-          ),
-          SizedBox(
-            height: context.height * 0.03,
-          ),
-          MainButton(
-            onpressd: () {},
-            background: AppColors.purple,
-            text: 'Verify',
-          ),
-          SizedBox(
-            height: context.height * 0.02,
-          ),
-          Text(
-            "Resend Code in 12s",
-            style: AppFonts.grey14Normal,
-          ),
-          SizedBox(
-            height: context.height * 0.02,
-          ),
-          TextButton(
-              onPressed: () {},
-              child: Text(
-                "Resend Code",
-                style: AppFonts.black20Bold
-                    .copyWith(color: AppColors.purple, fontSize: 12),
-              )),
-          SizedBox(
-            height: context.height * 0.3,
-          ),
-        ]),
+            ]),
       ),
       bottomSheet: Container(
         color: AppColors.white,

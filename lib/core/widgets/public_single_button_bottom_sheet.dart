@@ -36,7 +36,7 @@ class PublicSingleButtonBottomSheet extends StatelessWidget {
             height: 4.h,
             width: 40.w,
             decoration: BoxDecoration(
-              color: AppColors.grey,
+              color: AppColors.darkGrey,
               borderRadius: BorderRadius.circular(64.r),
             ),
           ),

@@ -1,9 +1,10 @@
 import 'package:evnto/core/constants/app_assets.dart';
 import 'package:evnto/features/home/data/event_bannar_entity.dart';
-import 'package:evnto/features/home/data/event_entity.dart';
-import 'package:evnto/features/home/view/components/home/event_card.dart';
 
+import '../../features/event_details/data/reivew_entity.dart';
+import '../../features/event_details/data/speaker_entity.dart';
 import '../../features/questions/data/models/question_entity.dart';
+import '../../features/shared/data/shared_event_entity.dart';
 
 class AppDummy {
   AppDummy._();
@@ -125,5 +126,80 @@ class AppDummy {
       date: DateTime.now(),
       location: "ITI Mansoura University",
     ),
+  ];
+
+  static final speakers = [
+    SpeakerEntity(
+      name: "John Doe",
+      image: Assets.imagesSpeaker1,
+      jobTitle: "Software Engineer",
+    ),
+    SpeakerEntity(
+      name: "Jane Doe",
+      image: Assets.imagesSpeaker2,
+      jobTitle: "Software Engineer",
+    ),
+    SpeakerEntity(
+      name: "John Doe",
+      image: Assets.imagesSpeaker1,
+      jobTitle: "Software Engineer",
+    ),
+    SpeakerEntity(
+      name: "Jane Doe",
+      image: Assets.imagesSpeaker2,
+      jobTitle: "Software Engineer",
+    ),
+    SpeakerEntity(
+      name: "John Doe",
+      image: Assets.imagesSpeaker1,
+      jobTitle: "Software Engineer",
+    ),
+    SpeakerEntity(
+      name: "Jane Doe",
+      image: Assets.imagesSpeaker2,
+      jobTitle: "Software Engineer",
+    ),
+
+
+  ];
+
+  static final reviews = [
+    ReivewEntity(
+      id: "1",
+      name: "John Doe",
+      image: Assets.imagesSpeaker1,
+      rating: 4.5,
+      comment:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
+      date: DateTime.now(),
+    ),
+    ReivewEntity(
+      id: "2",
+      name: "Jane Doe",
+      image: Assets.imagesSpeaker2,
+      rating: 3.5,
+      comment:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
+      date: DateTime.now(),
+    ),
+    ReivewEntity(
+      id: "1",
+      name: "John Doe",
+      image: Assets.imagesSpeaker1,
+      rating: 4.5,
+      comment:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
+      date: DateTime.now(),
+    ),
+    ReivewEntity(
+      id: "2",
+      name: "Jane Doe",
+      image: Assets.imagesSpeaker2,
+      rating: 3.5,
+      comment:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
+      date: DateTime.now(),
+    ),
+
   ];
 }

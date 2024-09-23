@@ -1,14 +1,13 @@
 import 'package:hugeicons/hugeicons.dart';
 
-import '../../../../../core/helpers/extensions/sizedbox_extensions.dart';
-import '../../../../../core/router/app_routes.dart';
-import '../../../../../core/styles/app_colors.dart';
-import '../../../../../core/widgets/public_circular_image.dart';
+import '../../../../core/helpers/extensions/sizedbox_extensions.dart';
+import '../../../../core/router/app_routes.dart';
+import '../../../../core/styles/app_colors.dart';
+import '../../../../core/widgets/public_circular_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:iconsax/iconsax.dart';
 
-import '../../../../../core/styles/app_fonts.dart';
+import '../../../../core/styles/app_fonts.dart';
 
 class AppBarTitle extends StatelessWidget {
   const AppBarTitle({
@@ -24,8 +23,13 @@ class AppBarTitle extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            PublicCircularImage(
-              radius: 30.r,
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, AppRoutes.profile);
+              },
+              child: PublicCircularImage(
+                radius: 30.r,
+              ),
             ),
             16.pw,
             Text(
@@ -48,7 +52,7 @@ class AppBarTitle extends StatelessWidget {
                   child: Icon(
                     HugeIcons.strokeRoundedNotification02,
                     size: 24.r,
-                    color: AppColors.darkGrey,
+                    color: AppColors.grey,
                   ),
                 ),
               ),

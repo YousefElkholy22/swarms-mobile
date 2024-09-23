@@ -5,9 +5,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hugeicons/hugeicons.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../../../../core/localization/generated/l10n.dart';
-import '../../../../../core/router/app_routes.dart';
-import '../../../../../core/styles/app_colors.dart';
+import '../../../../core/localization/generated/l10n.dart';
+import '../../../../core/router/app_routes.dart';
+import '../../../../core/styles/app_colors.dart';
 
 class SearchAppbar extends StatefulWidget {
   const SearchAppbar({
@@ -38,18 +38,24 @@ class _SearchAppbarState extends State<SearchAppbar> {
       child: Row(
         children: [
           Expanded(
-            child: PublicTextFormField(
-              hint: S.current.search,
-              showprefixIcon: true,
-              prefixIcon: Iconsax.search_normal,
-              controller: searchController,
-              borderRadius: 16.r,
+            child: InkWell(
+              onTap: (){
+                Navigator.pushNamed(context, AppRoutes.search);
+              },
+              child: PublicTextFormField(
+                hint: S.current.search,
+                enabled: false,
+                showprefixIcon: true,
+                prefixIcon: Iconsax.search_normal,
+                controller: searchController,
+                borderRadius: 16.r,
+              ),
             ),
           ),
          16.pw,
           InkWell(
             onTap: () {
-              Navigator.pushNamed(context, AppRoutes.filters);
+              Navigator.pushNamed(context, AppRoutes.search);
             },
             child: Container(
               height: 60.r,
@@ -62,7 +68,7 @@ class _SearchAppbarState extends State<SearchAppbar> {
                 child: Icon(
                   HugeIcons.strokeRoundedFilterHorizontal,
                   size: 24.r,
-                  color: AppColors.darkGrey,
+                  color: AppColors.grey,
                 ),
               ),
             ),

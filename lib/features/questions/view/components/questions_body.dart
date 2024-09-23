@@ -35,7 +35,7 @@ class QuestionsBody extends StatelessWidget {
         ),
         22.ph,
         SizedBox(
-          height: 488.h,
+          height: 480.h,
           child: OptionsList(
             isMultiple: question.isMultiple,
             options: question.options,
@@ -56,7 +56,7 @@ class QuestionsBody extends StatelessWidget {
                           bloc.questionAnswered(() {
                             Navigator.pushNamedAndRemoveUntil(
                               context,
-                              AppRoutes.home,
+                              AppRoutes.layouts,
                               (route) => false,
                             );
                           });

@@ -90,7 +90,7 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
       labelText: widget.label,
       labelStyle: TextStyle(color: AppColors.blue, fontSize: 18.sp),
       hintText: widget.hint,
-      hintStyle: TextStyle(color: AppColors.grey, fontSize: 14.sp),
+      hintStyle: TextStyle(color: AppColors.darkGrey, fontSize: 14.sp),
       contentPadding: widget.contentPadding ??
           EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
       enabledBorder: _getDefaultBorderDcoration(),
@@ -135,11 +135,11 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
         child: !showPassword
             ? const Icon(
                 Iconsax.eye,
-                color: AppColors.grey,
+                color: AppColors.darkGrey,
               )
             : const Icon(
                 Iconsax.eye_slash,
-                color: AppColors.grey,
+                color: AppColors.darkGrey,
               ),
       );
     }
@@ -149,7 +149,7 @@ class _PublicTextFormFieldState extends State<PublicTextFormField> {
   OutlineInputBorder _getDefaultBorderDcoration() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(widget.borderRadius),
-      borderSide: const BorderSide(color: AppColors.grey, width: 0.5),
+      borderSide: const BorderSide(color: AppColors.darkGrey, width: 0.5),
     );
   }
 

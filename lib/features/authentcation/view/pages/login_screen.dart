@@ -1,4 +1,5 @@
 import 'package:evnto/core/helpers/utils/media_query.dart';
+import 'package:evnto/core/router/app_routes.dart';
 import 'package:evnto/core/styles/app_colors.dart';
 import 'package:evnto/core/styles/app_fonts.dart';
 import 'package:evnto/features/authentcation/view/components/auth_background_design.dart';
@@ -63,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         isPassword
                             ? Icons.visibility_outlined
                             : Icons.visibility_off_outlined,
-                        color: AppColors.grey,
+                        color: AppColors.darkGrey,
                       )),
                   isPassword: isPassword,
                 ),
@@ -73,7 +74,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, AppRoutes.forgotPassword);
+                      },
                       child: Text(
                         "Forgot Password?",
                         style: AppFonts.black14Normal,
@@ -83,7 +86,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: context.height * 0.036,
                 ),
                 MainButton(
-                    onpressd: () {},
+                    onpressd: () {
+                      Navigator.pushNamed(context, AppRoutes.questions);
+                    },
                     background: AppColors.purple,
                     text: "Log In"),
                 SizedBox(
@@ -98,6 +103,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: AppFonts.black16Normal,
                     ),
                     InkWell(
+                      onTap: () {
+                        Navigator.pushReplacementNamed(context, AppRoutes.register);
+                      },
                       child: Text(
                         "Sign Up",
                         style: AppFonts.black20Bold.copyWith(fontSize: 16),

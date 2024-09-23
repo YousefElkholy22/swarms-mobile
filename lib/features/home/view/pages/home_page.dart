@@ -1,12 +1,14 @@
+import 'package:evnto/core/constants/app_assets.dart';
 import 'package:evnto/core/constants/app_dummy.dart';
 import 'package:evnto/core/helpers/extensions/sizedbox_extensions.dart';
 import 'package:evnto/core/styles/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/router/app_routes.dart';
-import '../components/home/events_banner.dart';
-import '../components/home/home_appbar.dart';
-import '../components/home/upcoming_events.dart';
+import '../components/events_banner.dart';
+import '../components/home_appbar.dart';
+import '../components/upcoming_events.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -47,6 +49,17 @@ class HomePage extends StatelessWidget {
             ),
             20.svph,
           ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: AppColors.white,
+        shape: const CircleBorder(),
+        onPressed: () {
+          Navigator.pushNamed(context, AppRoutes.chatpot);
+        },
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Image.asset(Assets.imagesChatpot),
         ),
       ),
     );

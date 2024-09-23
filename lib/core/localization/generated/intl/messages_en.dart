@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "calendar": MessageLookupByLibrary.simpleMessage("Calendar"),
         "enterYourEmail":
             MessageLookupByLibrary.simpleMessage("Please, Enter Your Email"),
         "enterYourName":
@@ -29,7 +30,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterYourPassword":
             MessageLookupByLibrary.simpleMessage("Please, Enter Your Password"),
         "evnto": MessageLookupByLibrary.simpleMessage("Evnto"),
+        "favorites": MessageLookupByLibrary.simpleMessage("Favorites"),
         "hi": MessageLookupByLibrary.simpleMessage("Hi"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
         "home_comment": MessageLookupByLibrary.simpleMessage(
             "-------------------------------------- home_comment ------------------------------------"),
         "invalidEmailMessage": MessageLookupByLibrary.simpleMessage(
@@ -50,8 +53,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("All Events in One Place!"),
         "onboarding_comment": MessageLookupByLibrary.simpleMessage(
             "-------------------------------------- onboarding_comment ------------------------------------"),
+        "organizers": MessageLookupByLibrary.simpleMessage("Organizers"),
         "passwordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("Passwords do not match"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "questions_comment": MessageLookupByLibrary.simpleMessage(
             "-------------------------------------- questions_comment ------------------------------------"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
