@@ -38,18 +38,24 @@ class _SearchAppbarState extends State<SearchAppbar> {
       child: Row(
         children: [
           Expanded(
-            child: PublicTextFormField(
-              hint: S.current.search,
-              showprefixIcon: true,
-              prefixIcon: Iconsax.search_normal,
-              controller: searchController,
-              borderRadius: 16.r,
+            child: InkWell(
+              onTap: (){
+                Navigator.pushNamed(context, AppRoutes.search);
+              },
+              child: PublicTextFormField(
+                hint: S.current.search,
+                enabled: false,
+                showprefixIcon: true,
+                prefixIcon: Iconsax.search_normal,
+                controller: searchController,
+                borderRadius: 16.r,
+              ),
             ),
           ),
          16.pw,
           InkWell(
             onTap: () {
-              Navigator.pushNamed(context, AppRoutes.filters);
+              Navigator.pushNamed(context, AppRoutes.search);
             },
             child: Container(
               height: 60.r,

@@ -3,6 +3,7 @@ import 'package:evnto/core/constants/app_dummy.dart';
 import 'package:evnto/core/helpers/extensions/sizedbox_extensions.dart';
 import 'package:evnto/core/styles/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/router/app_routes.dart';
 import '../components/events_banner.dart';
@@ -56,7 +57,10 @@ class HomePage extends StatelessWidget {
         onPressed: () {
           Navigator.pushNamed(context, AppRoutes.chatpot);
         },
-        child: Image.asset(Assets.iconsAi),
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Image.asset(Assets.imagesChatpot),
+        ),
       ),
     );
   }

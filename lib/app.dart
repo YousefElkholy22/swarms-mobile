@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         scrollBehavior: ScrollConfiguration.of(context).copyWith(
           physics: const BouncingScrollPhysics(),
         ),
-        initialRoute: AppRoutes.layouts,
+        initialRoute: AppRoutes.onboarding,
         
 
       ),

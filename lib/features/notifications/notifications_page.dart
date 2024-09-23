@@ -5,14 +5,21 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/styles/app_fonts.dart';
 
-class CalendarPage extends StatelessWidget {
-  const CalendarPage({super.key});
+class NotificationsPage extends StatelessWidget {
+  const NotificationsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Notifications',
+          style: AppFonts.black24SemiBold,
+        ),
+      ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
               Assets.imagesAlarm,
