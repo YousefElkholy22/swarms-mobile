@@ -23,6 +23,7 @@ class AppColors {
   static const grey = Colors.grey;
   static const red = Colors.red;
   static const green = Colors.green;
+  static Color opacityPurple = Colors.purple.withOpacity(0.035);
 
   static const transparent = Colors.transparent;
 }
