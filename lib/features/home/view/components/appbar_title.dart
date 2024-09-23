@@ -23,8 +23,13 @@ class AppBarTitle extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            PublicCircularImage(
-              radius: 30.r,
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, AppRoutes.profile);
+              },
+              child: PublicCircularImage(
+                radius: 30.r,
+              ),
             ),
             16.pw,
             Text(

@@ -23,9 +23,16 @@ class AppRoutes {
   static const String allEvents = '/all-events';
   static const String filters = '/filters';
   static const String search = '/search';
+  static const String chatpot = '/chatpot';
+
+  /// event details
   static const String eventDetails = '/event-details';
 
   /// notifications
   static const String notifications = '/notifications';
+
+  /// profile
+  static const String profile = '/profile';
+
   
 }

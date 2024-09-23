@@ -6,6 +6,8 @@ import 'package:evnto/features/authentcation/view/components/input_form.dart';
 import 'package:evnto/features/authentcation/view/components/main_button.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/router/app_routes.dart';
+
 class ForgetPasswordScreen extends StatefulWidget {
   const ForgetPasswordScreen({super.key});
 
@@ -46,13 +48,17 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               height: context.height * 0.04,
             ),
             MainButton(
-                onpressd: () {},
+                onpressd: () {
+                  Navigator.pushNamed(context, AppRoutes.verifyEmail);
+                },
                 background: AppColors.purple,
                 text: "Get Code"),
             SizedBox(
               height: context.height * 0.45,
             ),
-          ], title: "Forgot Password", fun: () {})),
+          ], title: "Forgot Password", fun: () {
+            Navigator.pop(context);
+          })),
       bottomSheet: Container(
         width: double.infinity,
         height: context.height * 0.05,

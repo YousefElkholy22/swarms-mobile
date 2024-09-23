@@ -56,7 +56,7 @@ class QuestionsBody extends StatelessWidget {
                           bloc.questionAnswered(() {
                             Navigator.pushNamedAndRemoveUntil(
                               context,
-                              AppRoutes.home,
+                              AppRoutes.layouts,
                               (route) => false,
                             );
                           });

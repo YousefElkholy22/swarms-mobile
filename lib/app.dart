@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(428, 926),
+      minTextAdapt: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Evnto',
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         scrollBehavior: ScrollConfiguration.of(context).copyWith(
           physics: const BouncingScrollPhysics(),
         ),
-        initialRoute: AppRoutes.layouts,
+        initialRoute: AppRoutes.onboarding,
         
 
       ),
