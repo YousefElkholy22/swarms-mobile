@@ -3,7 +3,7 @@ import 'package:evnto/features/authentcation/view/pages/forget_password_screen.d
 import 'package:evnto/features/authentcation/view/pages/login_screen.dart';
 import 'package:evnto/features/authentcation/view/pages/otp_screen.dart';
 import 'package:evnto/features/authentcation/view/pages/register_screen.dart';
-import 'package:evnto/features/chatpot/chatpot_page.dart';
+import 'package:evnto/features/chatpot/view/pages/chatpot_page.dart';
 import 'package:evnto/features/event_details/view/pages/event_details_page.dart';
 import 'package:evnto/features/home/view/pages/all_events_page.dart';
 import 'package:evnto/features/home/view/pages/home_page.dart';
