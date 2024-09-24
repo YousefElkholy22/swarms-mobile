@@ -1,13 +1,19 @@
 import 'package:evnto/core/helpers/utils/media_query.dart';
 import 'package:evnto/core/styles/app_colors.dart';
 import 'package:evnto/core/styles/app_fonts.dart';
+import 'package:evnto/features/profile/components/logout_bottom_sheet.dart';
 import 'package:evnto/features/profile/components/profile_item_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ProfileScreen extends StatelessWidget {
+class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
 
+  @override
+  State<ProfileScreen> createState() => _ProfileScreenState();
+}
+
+class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,25 +105,9 @@ class ProfileScreen extends StatelessWidget {
                 title: "Logout",
                 isPage: false,
                 fun: () {
-                  showBottomSheet(
-                    context: context,
-                    builder: (context) => Container(
-                      width: double.infinity,
-                      decoration: const BoxDecoration(
-                        color: AppColors.white,
-                      ),
-                      child: const Center(
-                        child: Column(
-                          children: [
-                            Icon(
-                              Icons.logout_rounded,
-                              color: AppColors.red,
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  );
+                  showModalBottomSheet(
+                      context: context,
+                      builder: (context) => const LogoutBottomSheet());
                 },
               ),
               SizedBox(

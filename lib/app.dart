@@ -1,6 +1,3 @@
-import 'package:evnto/features/profile/pages/about_us_screen.dart';
-import 'package:evnto/features/profile/pages/contact_us_screen.dart';
-import 'package:evnto/features/profile/pages/edit_profile_screen.dart';
 import 'package:evnto/features/profile/pages/profile_screen.dart';
 import 'core/localization/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -35,8 +32,6 @@ class MyApp extends StatelessWidget {
           physics: const BouncingScrollPhysics(),
         ),
         home: const ProfileScreen(),
-        
-
       ),
     );
   }
