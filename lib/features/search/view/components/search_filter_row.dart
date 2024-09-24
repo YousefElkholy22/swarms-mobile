@@ -1,6 +1,8 @@
 import 'package:evnto/core/helpers/extensions/sizedbox_extensions.dart';
 import 'package:evnto/core/widgets/public_text_form_field.dart';
+import 'package:evnto/features/search/bloc/search_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hugeicons/hugeicons.dart';
 import 'package:iconsax/iconsax.dart';
@@ -47,7 +49,8 @@ class _SearchFilterRowState extends State<SearchFilterRow> {
               controller: searchController,
               borderRadius: 16.r,
               onChanged: (value) {
-
+                final bloc = context.read<SearchCubit>();
+                bloc.search(value);
               },
             ),
           ),

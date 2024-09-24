@@ -9,12 +9,11 @@ class EmptySearchView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        const RecentSearchSection(),
-        24.ph,
-        const RecentViewSection(),
+        RecentSearchSection(),
+        RecentViewSection(),
       ]
     );
   }
