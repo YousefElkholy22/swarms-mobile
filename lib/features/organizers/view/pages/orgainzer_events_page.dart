@@ -1,22 +1,21 @@
 import 'package:evnto/core/helpers/extensions/sizedbox_extensions.dart';
+import 'package:evnto/core/styles/app_fonts.dart';
+import 'package:evnto/features/shared/view/components/event_list_tile/shared_event_list_tile.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/constants/app_dummy.dart';
-import '../../../../../core/styles/app_fonts.dart';
-import '../../../shared/view/components/event_list_tile/shared_event_list_tile.dart';
 import '../../../shared/view/components/event_filter_row/event_filter_row.dart';
+import '../../data/organizer_entity.dart';
 
-class FavoritesPage extends StatelessWidget {
-  const FavoritesPage({super.key});
+class OrgainzerEventsPage extends StatelessWidget {
+  final OrganizerEntity organizer;
+
+  const OrgainzerEventsPage({super.key, required this.organizer});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Favorites',
-          style: AppFonts.black20Bold,
-        ),
+        title: Text(organizer.name, style: AppFonts.black24SemiBold),
       ),
       body: SafeArea(
         child: Column(
@@ -26,9 +25,10 @@ class FavoritesPage extends StatelessWidget {
             20.ph,
             Expanded(
               child: ListView.builder(
-                itemCount: AppDummy.events.length,
+                itemCount: organizer.events.length,
                 itemBuilder: (_, index) {
-                  return SharedEventListTile(event: AppDummy.events[index]);
+                  final event = organizer.events[index];
+                  return SharedEventListTile(event: event);
                 },
               ),
             ),

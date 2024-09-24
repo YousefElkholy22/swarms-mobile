@@ -8,6 +8,9 @@ import 'package:evnto/features/event_details/view/pages/event_details_page.dart'
 import 'package:evnto/features/home/view/pages/all_events_page.dart';
 import 'package:evnto/features/home/view/pages/home_page.dart';
 import 'package:evnto/features/home/view/pages/upcoming_page.dart';
+import 'package:evnto/features/organizers/data/organizer_entity.dart';
+import 'package:evnto/features/organizers/view/pages/orgainzer_events_page.dart';
+import 'package:evnto/features/organizers/view/pages/orgainzers_list_page.dart';
 import 'package:evnto/features/profile/view/profile_page.dart';
 import 'package:evnto/features/questions/view/pages/questions_page.dart';
 import 'package:evnto/features/shared/view/pages/layouts_page.dart';
@@ -19,6 +22,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../features/filters/filter_page.dart';
 import '../../features/home/view/pages/for_you_page.dart';
 import '../../features/notifications/notifications_page.dart';
+import '../../features/organizers/data/orgainzers_list_state.dart';
 import '../../features/questions/bloc/question_cubit.dart';
 import '../../features/shared/data/shared_event_entity.dart';
 import '../../features/welcome/bloc/onboarding_bloc.dart';
@@ -139,6 +143,23 @@ class RouteGenerate {
         return MaterialPageRoute(
           settings: routeSettings,
           builder: (_) => const SearchPage(),
+        );
+
+      // Organizers
+      case AppRoutes.organizersList:
+        return MaterialPageRoute(
+          settings: routeSettings,
+          builder: (_) => OrgainzersListPage(
+            state: routeSettings.arguments as OrgainzersListState,
+          ),
+        );
+      // Organizers
+      case AppRoutes.organizerEvents:
+        return MaterialPageRoute(
+          settings: routeSettings,
+          builder: (_) => OrgainzerEventsPage(
+            organizer: routeSettings.arguments as OrganizerEntity,
+          ),
         );
 
       default:

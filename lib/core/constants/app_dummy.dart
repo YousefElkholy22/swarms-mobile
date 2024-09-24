@@ -4,6 +4,7 @@ import 'package:evnto/features/home/data/event_bannar_entity.dart';
 import '../../features/chatpot/data/message_entity.dart';
 import '../../features/event_details/data/reivew_entity.dart';
 import '../../features/event_details/data/speaker_entity.dart';
+import '../../features/organizers/data/organizer_entity.dart';
 import '../../features/questions/data/models/question_entity.dart';
 import '../../features/shared/data/shared_event_entity.dart';
 
@@ -231,6 +232,60 @@ class AppDummy {
       text: "I recommend you to attend the IEEE Victoris 3.0 event.",
       time: DateTime.now().subtract(const Duration(minutes: 1)),
       isBot: true,
+    ),
+  ];
+
+  static final teams = [
+    OrganizerEntity(
+      id: "1",
+      name: "CIS",
+      image: Assets.imagesCisTeam,
+      events: events,
+    ),
+    OrganizerEntity(
+      id: "2",
+      name: "IEEE",
+      image: Assets.imagesIeeeTeam,
+      events: events,
+    ),
+    OrganizerEntity(
+      id: "1",
+      name: "CIS",
+      image: Assets.imagesCisTeam,
+      events: events,
+    ),
+    OrganizerEntity(
+      id: "2",
+      name: "IEEE",
+      image: Assets.imagesIeeeTeam,
+      events: events,
+    ),
+  ];
+
+  static final mentors = [
+    OrganizerEntity(
+      id: "1",
+      name: "Moahmed Kahled",
+      image: Assets.imagesSpeaker1,
+      events: events,
+    ),
+    OrganizerEntity(
+      id: "2",
+      name: "Ahmed Ali",
+      image: Assets.imagesSpeaker2,
+      events: events,
+    ),
+    OrganizerEntity(
+      id: "1",
+      name: "Moahmed Kahled",
+      image: Assets.imagesSpeaker1,
+      events: events,
+    ),
+    OrganizerEntity(
+      id: "2",
+      name: "Ahmed Ali",
+      image: Assets.imagesSpeaker2,
+      events: events,
     ),
   ];
 }
