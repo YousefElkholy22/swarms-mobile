@@ -9,28 +9,11 @@ import '../../../../core/localization/generated/l10n.dart';
 import '../../../../core/router/app_routes.dart';
 import '../../../../core/styles/app_colors.dart';
 
-class SearchAppbar extends StatefulWidget {
+class SearchAppbar extends StatelessWidget {
   const SearchAppbar({
     super.key,
   });
 
-  @override
-  State<SearchAppbar> createState() => _SearchAppbarState();
-}
-
-class _SearchAppbarState extends State<SearchAppbar> {
-  late TextEditingController searchController;
-  @override
-  void initState() {
-    super.initState();
-    searchController = TextEditingController();
-  }
-
-  @override
-  void dispose() {
-    searchController.dispose();
-    super.dispose();
-  }
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -47,7 +30,6 @@ class _SearchAppbarState extends State<SearchAppbar> {
                 enabled: false,
                 showprefixIcon: true,
                 prefixIcon: Iconsax.search_normal,
-                controller: searchController,
                 borderRadius: 16.r,
               ),
             ),

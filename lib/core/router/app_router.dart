@@ -13,13 +13,14 @@ import 'package:evnto/features/organizers/view/pages/orgainzer_events_page.dart'
 import 'package:evnto/features/organizers/view/pages/orgainzers_list_page.dart';
 import 'package:evnto/features/profile/view/profile_page.dart';
 import 'package:evnto/features/questions/view/pages/questions_page.dart';
+import 'package:evnto/features/search/bloc/search_cubit.dart';
 import 'package:evnto/features/shared/view/pages/layouts_page.dart';
 import 'package:evnto/features/welcome/view/pages/onboarding_page.dart';
 import 'package:evnto/features/welcome/view/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../features/filters/filter_page.dart';
+import '../../features/search/view/pages/search_page.dart';
 import '../../features/home/view/pages/for_you_page.dart';
 import '../../features/notifications/notifications_page.dart';
 import '../../features/organizers/data/orgainzers_list_state.dart';
@@ -142,7 +143,10 @@ class RouteGenerate {
       case AppRoutes.search:
         return MaterialPageRoute(
           settings: routeSettings,
-          builder: (_) => const SearchPage(),
+          builder: (_) => BlocProvider(
+            create: (context) => SearchCubit(),
+            child: const SearchPage(),
+          ),
         );
 
       // Organizers

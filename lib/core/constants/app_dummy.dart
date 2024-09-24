@@ -1,5 +1,6 @@
 import 'package:evnto/core/constants/app_assets.dart';
 import 'package:evnto/features/home/data/event_bannar_entity.dart';
+import 'package:evnto/features/search/data/models/recent_search_entity.dart';
 
 import '../../features/chatpot/data/message_entity.dart';
 import '../../features/event_details/data/reivew_entity.dart';
@@ -287,5 +288,10 @@ class AppDummy {
       image: Assets.imagesSpeaker2,
       events: events,
     ),
+  ];
+
+  static final recentSearch = [
+    RecentSearchEntity(query: "IEEE", timestamp: DateTime.now()),
+    RecentSearchEntity(query: "Workshops", timestamp: DateTime.now()),
   ];
 }
