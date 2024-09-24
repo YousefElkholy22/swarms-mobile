@@ -8,8 +8,6 @@ import 'package:evnto/features/authentcation/view/components/main_button.dart';
 import 'package:evnto/features/authentcation/view/components/password_strength.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/router/app_routes.dart';
-
 class ChangePasswordScreen extends StatefulWidget {
   const ChangePasswordScreen({super.key});
 
@@ -33,141 +31,134 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
       backgroundColor: AppColors.purple,
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
-        child: AuthLayout(
-            fun: () {
-              Navigator.pop(context);
+        child: AuthLayout(fun: () {}, title: "Reset Password", widgets: [
+          Text(
+            "In order to keep your account safe you need to create a strong password.",
+            style: AppFonts.black16Normal.copyWith(fontSize: 16.3),
+          ),
+          SizedBox(
+            height: context.height * 0.02,
+          ),
+          InputForm(
+            controller: passwordController,
+            onChanged: (value) {
+              if (value.toString().length > 8 && value.toString().length < 20) {
+                setState(() {
+                  passwordLength = true;
+                });
+              } else if (value.toString().hasUpperCase()) {
+                setState(() {
+                  passwordUpperCase = true;
+                });
+              } else if (value.toString().hasNumber()) {
+                setState(() {
+                  passwordContainNum = true;
+                });
+              } else if (value.toString().hasSpecialCharacter()) {
+                setState(() {
+                  passwordSpecialChar = true;
+                });
+              } else {
+                setState(() {
+                  passwordLength = false;
+                  passwordUpperCase = false;
+                  passwordContainNum = false;
+                  passwordSpecialChar = false;
+                });
+              }
             },
-            title: "Reset Password",
-            widgets: [
-              Text(
-                "In order to keep your account safe you need to create a strong password.",
-                style: AppFonts.black16Normal.copyWith(fontSize: 16.3),
-              ),
-              SizedBox(
-                height: context.height * 0.02,
-              ),
-              InputForm(
-                controller: passwordController,
-                onChanged: (value) {
-                  if (value.toString().length > 8 &&
-                      value.toString().length < 20) {
-                    setState(() {
-                      passwordLength = true;
-                    });
-                  } else if (value.toString().hasUpperCase()) {
-                    setState(() {
-                      passwordUpperCase = true;
-                    });
-                  } else if (value.toString().hasNumber()) {
-                    setState(() {
-                      passwordContainNum = true;
-                    });
-                  } else if (value.toString().hasSpecialCharacter()) {
-                    setState(() {
-                      passwordSpecialChar = true;
-                    });
-                  } else {
-                    setState(() {
-                      passwordLength = false;
-                      passwordUpperCase = false;
-                      passwordContainNum = false;
-                      passwordSpecialChar = false;
-                    });
-                  }
+            validate: (String value) {},
+            hint: "Password",
+            type: TextInputType.text,
+            width: double.infinity,
+            isPassword: isPassword,
+            suffix: IconButton(
+                onPressed: () {
+                  setState(() {
+                    isPassword = !isPassword;
+                  });
                 },
-                validate: (String value) {},
-                hint: "Password",
-                type: TextInputType.text,
-                width: double.infinity,
-                isPassword: isPassword,
-                suffix: IconButton(
-                    onPressed: () {
-                      setState(() {
-                        isPassword = !isPassword;
-                      });
-                    },
-                    icon: Icon(
-                      isPassword
-                          ? Icons.visibility_outlined
-                          : Icons.visibility_off_outlined,
-                      color: AppColors.grey,
-                    )),
-              ),
-              SizedBox(
-                height: context.height * 0.035,
-              ),
-              InputForm(
-                controller: confirmPasswordController,
-                validate: (String value) {},
-                hint: "Password",
-                type: TextInputType.text,
-                width: double.infinity,
-                isPassword: isPassword,
-                suffix: IconButton(
-                    onPressed: () {
-                      setState(() {
-                        isPassword = !isPassword;
-                      });
-                    },
-                    icon: Icon(
-                      isPassword
-                          ? Icons.visibility_outlined
-                          : Icons.visibility_off_outlined,
-                      color: AppColors.grey,
-                    )),
-              ),
-              SizedBox(
-                height: context.height * 0.01,
-              ),
-              Text(
-                "your password must contain",
-                style: AppFonts.grey16SemiBold.copyWith(
-                    fontWeight: FontWeight.bold, color: AppColors.darkGrey),
-              ),
-              SizedBox(
-                height: context.height * 0.01,
-              ),
-              PasswordStrength(
-                text: "between 8 and 20 characters",
-                checked: passwordLength,
-              ),
-              SizedBox(
-                height: context.height * 0.01,
-              ),
-              PasswordStrength(
-                text: "1 upper case character",
-                checked: passwordUpperCase,
-              ),
-              SizedBox(
-                height: context.height * 0.01,
-              ),
-              PasswordStrength(
-                text: "1 or more numbers",
-                checked: passwordContainNum,
-              ),
-              SizedBox(
-                height: context.height * 0.01,
-              ),
-              PasswordStrength(
-                text: "1 or more special character",
-                checked: passwordSpecialChar,
-              ),
-              SizedBox(
-                height: context.height * 0.03,
-              ),
-              MainButton(
-                onpressd: () {
-                  Navigator.popUntil(context,
-                      (route) => route.settings.name == AppRoutes.login);
+                icon: Icon(
+                  isPassword
+                      ? Icons.visibility_outlined
+                      : Icons.visibility_off_outlined,
+                  color: AppColors.grey,
+                )),
+          ),
+          SizedBox(
+            height: context.height * 0.035,
+          ),
+          InputForm(
+            controller: confirmPasswordController,
+            validate: (String value) {},
+            hint: "Password",
+            type: TextInputType.text,
+            width: double.infinity,
+            isPassword: isPassword,
+            suffix: IconButton(
+                onPressed: () {
+                  setState(() {
+                    isPassword = !isPassword;
+                  });
                 },
-                background: AppColors.purple,
-                text: "Change Password",
-              )
-            ]),
+                icon: Icon(
+                  isPassword
+                      ? Icons.visibility_outlined
+                      : Icons.visibility_off_outlined,
+                  color: AppColors.grey,
+                )),
+          ),
+          SizedBox(
+            height: context.height * 0.01,
+          ),
+          Text(
+            "your password must contain",
+            style: AppFonts.grey16SemiBold.copyWith(
+                fontWeight: FontWeight.bold, color: AppColors.darkGrey),
+          ),
+          SizedBox(
+            height: context.height * 0.01,
+          ),
+          PasswordStrength(
+            text: "between 8 and 20 characters",
+            checked: passwordLength,
+          ),
+          SizedBox(
+            height: context.height * 0.01,
+          ),
+          PasswordStrength(
+            text: "1 upper case character",
+            checked: passwordUpperCase,
+          ),
+          SizedBox(
+            height: context.height * 0.01,
+          ),
+          PasswordStrength(
+            text: "1 or more numbers",
+            checked: passwordContainNum,
+          ),
+          SizedBox(
+            height: context.height * 0.01,
+          ),
+          PasswordStrength(
+            text: "1 or more special character",
+            checked: passwordSpecialChar,
+          ),
+          SizedBox(
+            height: context.height * 0.03,
+          ),
+          MainButton(
+              onpressd: () {},
+              background: AppColors.purple,
+              text: "Change Password"),
+          SizedBox(
+            height: context.height * 0.16,
+          )
+        ]),
       ),
-       bottomSheet: Container(
+      bottomSheet: Container(
         width: double.infinity,
-        height: context.height * 0.15,
+        height: context.height * 0.04,
         color: AppColors.white,
       ),
     );

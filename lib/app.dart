@@ -1,8 +1,7 @@
-import 'package:evnto/core/router/app_routes.dart';
-import 'package:evnto/features/authentcation/view/pages/change_password_screen.dart';
-import 'package:evnto/features/authentcation/view/pages/otp_screen.dart';
-import 'package:evnto/features/favorites/view/pages/favorites_page.dart';
-import 'package:evnto/features/shared/view/pages/layouts_page.dart';
+import 'package:evnto/features/profile/pages/about_us_screen.dart';
+import 'package:evnto/features/profile/pages/contact_us_screen.dart';
+import 'package:evnto/features/profile/pages/edit_profile_screen.dart';
+import 'package:evnto/features/profile/pages/profile_screen.dart';
 import 'core/localization/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -35,7 +34,7 @@ class MyApp extends StatelessWidget {
         scrollBehavior: ScrollConfiguration.of(context).copyWith(
           physics: const BouncingScrollPhysics(),
         ),
-        initialRoute: AppRoutes.layouts,
+        home: const ProfileScreen(),
         
 
       ),
