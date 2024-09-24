@@ -1,5 +1,6 @@
 import 'package:evnto/features/questions/data/models/question_entity.dart';
 
+import '../../features/organizers/data/organizer_entity.dart';
 import '../../features/welcome/data/models/onboarding_entity.dart';
 import '../localization/generated/l10n.dart';
 
@@ -21,6 +22,20 @@ class AppConstants {
     ),
   ];
 
+  static final orgainzers = [
+    OrganizerEntity(
+      id: "1",
+      name: "Teams",
+      image: Assets.imagesTeam,
+      events: [],
+    ),
+    OrganizerEntity(
+      id: "2",
+      name: "Menters",
+      image: Assets.imagesMentor,
+      events: [],
+    ),
+  ];
 }
 
 class PrefsKeys {

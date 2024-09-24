@@ -5,7 +5,7 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../../calendar/view/calendar_page.dart';
 import '../../../favorites/view/pages/favorites_page.dart';
-import '../../../organizers/view/organizers_page.dart';
+import '../../../organizers/view/pages/organizers_page.dart';
 import '../../../../../core/localization/generated/l10n.dart';
 import '../../../../../core/styles/app_colors.dart';
 import '../../../home/view/pages/home_page.dart';

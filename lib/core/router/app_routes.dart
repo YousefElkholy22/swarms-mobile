@@ -34,5 +34,9 @@ class AppRoutes {
   /// profile
   static const String profile = '/profile';
 
+  /// organizers
+  static const String organizersList = '/organizers-list';
+  static const String organizerEvents = '/organizer-events';
+
   
 }
