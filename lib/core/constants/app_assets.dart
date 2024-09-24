@@ -58,9 +58,21 @@ class Assets {
   /// assets/images/cis.png
   static const String imagesCis = "assets/images/cis.png";
 
+  /// Assets for imagesCisTeam
+  /// assets/images/cis_team.png
+  static const String imagesCisTeam = "assets/images/cis_team.png";
+
   /// Assets for imagesIeee
   /// assets/images/ieee.png
   static const String imagesIeee = "assets/images/ieee.png";
+
+  /// Assets for imagesIeeeTeam
+  /// assets/images/ieee_team.png
+  static const String imagesIeeeTeam = "assets/images/ieee_team.png";
+
+  /// Assets for imagesMentor
+  /// assets/images/mentor.png
+  static const String imagesMentor = "assets/images/mentor.png";
 
   /// Assets for imagesMl
   /// assets/images/ml.png
@@ -85,6 +97,10 @@ class Assets {
   /// Assets for imagesSplashImg
   /// assets/images/splash_img.png
   static const String imagesSplashImg = "assets/images/splash_img.png";
+
+  /// Assets for imagesTeam
+  /// assets/images/team.png
+  static const String imagesTeam = "assets/images/team.png";
 
   /// Assets for imagesWelcome
   /// assets/images/welcome.png

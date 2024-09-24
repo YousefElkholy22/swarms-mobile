@@ -35,6 +35,8 @@ class MyApp extends StatelessWidget {
           physics: const BouncingScrollPhysics(),
         ),
         home: const ProfileScreen(),
+        
+
       ),
     );
   }

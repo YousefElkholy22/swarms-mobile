@@ -7,6 +7,11 @@ class AppFonts {
   AppFonts._();
 
   // Base fonts
+  static final TextStyle black12Normal = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.normal,
+    color: Colors.black,
+  );
   static final TextStyle black14Normal = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeight.normal,

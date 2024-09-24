@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/styles/app_colors.dart';
+import '../../../../../core/styles/app_colors.dart';
 import 'toggle_card.dart';
 
-class FavoritesFilter extends StatefulWidget {
-  const FavoritesFilter({super.key});
+class EventFilterRow extends StatefulWidget {
+  const EventFilterRow({super.key});
 
   @override
-  State<FavoritesFilter> createState() => _FavoritesFilterState();
+  State<EventFilterRow> createState() => _EventFilterRowState();
 }
 
-class _FavoritesFilterState extends State<FavoritesFilter> {
+class _EventFilterRowState extends State<EventFilterRow> {
   int selectedIndex = 0;
 
   @override
