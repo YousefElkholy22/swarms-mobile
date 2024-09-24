@@ -31,5 +31,11 @@ class AppThemes {
       color: AppColors.white,
       surfaceTintColor: AppColors.white
     ),
+
+    /// bottom sheet theme
+    bottomSheetTheme: const BottomSheetThemeData(
+      backgroundColor: AppColors.white,
+      surfaceTintColor: AppColors.white,
+    ),
   );
 }
