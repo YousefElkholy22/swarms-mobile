@@ -1,5 +1,6 @@
-import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:evnto/core/helpers/extensions/sizedbox_extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hugeicons/hugeicons.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -40,9 +41,8 @@ class _LayoutsPageState extends State<LayoutsPage> {
       body: SizedBox.expand(
         child: PageView(
           controller: pageController,
-          scrollBehavior: ScrollConfiguration.of(context).copyWith(
-            physics: const NeverScrollableScrollPhysics()
-          ),
+          scrollBehavior: ScrollConfiguration.of(context)
+              .copyWith(physics: const NeverScrollableScrollPhysics()),
           children: _containScreen,
         ),
       ),
@@ -75,15 +75,19 @@ class _AppBottomNavBarState extends State<AppBottomNavBar> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return BottomNavyBar(
-      selectedIndex: selectedIndex,
-      showElevation: true,
-      onItemSelected: _onTap,
+    return BottomNavigationBar(
+      backgroundColor: AppColors.white,
+      currentIndex: selectedIndex,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
+
+      onTap: _onTap,
+      elevation: 2,
       items: _navBarsItems(),
     );
   }
 
-  List<BottomNavyBarItem> _navBarsItems() {
+  List<BottomNavigationBarItem> _navBarsItems() {
     return [
       _buildBarItem(
         0,
@@ -108,16 +112,41 @@ class _AppBottomNavBarState extends State<AppBottomNavBar> {
     ];
   }
 
-  BottomNavyBarItem _buildBarItem(
+  BottomNavigationBarItem _buildBarItem(
     int index,
     IconData icon,
     String title,
   ) {
-    return BottomNavyBarItem(
-      icon: Icon(icon),
-      title: Text(title),
-      activeColor: AppColors.blue,
-      inactiveColor: AppColors.grey,
+    return BottomNavigationBarItem(
+      icon: Container(
+        decoration: BoxDecoration(
+          color:
+              selectedIndex == index ? AppColors.blue : AppColors.white,
+          borderRadius: BorderRadius.circular(16.r),
+        ),
+        padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              icon,
+              color:
+                  selectedIndex == index ? AppColors.white : AppColors.darkGrey,
+            ),
+            8.pw,
+            selectedIndex == index
+                ? Flexible(
+                  child: Text(
+                      title,
+                      maxLines: 1,
+                      style: const TextStyle(color: AppColors.white),
+                    ),
+                )
+                : const SizedBox.shrink(),
+          ],
+        ),
+      ),
+      label: title,
     );
   }
 

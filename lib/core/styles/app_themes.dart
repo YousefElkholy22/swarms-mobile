@@ -11,8 +11,9 @@ class AppThemes {
 
     /// Colors
     scaffoldBackgroundColor: AppColors.white,
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: AppColors.blue,
+    colorScheme: const ColorScheme.light(
+      primary: AppColors.blue,
+      surface: AppColors.white,
     ),
 
     /// App Bar Theme
@@ -28,14 +29,20 @@ class AppThemes {
 
     /// Card Theme
     cardTheme: const CardTheme(
-      color: AppColors.white,
-      surfaceTintColor: AppColors.white
-    ),
+        color: AppColors.white, surfaceTintColor: AppColors.white),
 
     /// bottom sheet theme
     bottomSheetTheme: const BottomSheetThemeData(
       backgroundColor: AppColors.white,
       surfaceTintColor: AppColors.white,
+    ),
+
+    /// bottom nav bar theme
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      backgroundColor: AppColors.white,
+
+      // selectedItemColor: AppColors.blue,
+      // unselectedItemColor: AppColors.darkGrey,
     ),
   );
 }

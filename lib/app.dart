@@ -1,3 +1,4 @@
+import 'package:evnto/core/router/app_routes.dart';
 import 'package:evnto/features/profile/pages/profile_screen.dart';
 import 'core/localization/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +32,8 @@ class MyApp extends StatelessWidget {
         scrollBehavior: ScrollConfiguration.of(context).copyWith(
           physics: const BouncingScrollPhysics(),
         ),
-        home: const ProfileScreen(),
+        // home: const La(),
+        initialRoute: AppRoutes.layouts,
       ),
     );
   }
