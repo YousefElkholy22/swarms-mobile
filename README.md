@@ -204,8 +204,21 @@ README.md
  <img src="https://github.com/user-attachments/assets/1909d9dd-eb1f-462d-b7fb-7e5819b92c18" width="200" />
  <img src="https://github.com/user-attachments/assets/c615aed6-4941-42e0-8fb4-b04d9772c219" width="200" />
  <img src="https://github.com/user-attachments/assets/bca66c92-4796-4df2-8a0f-3fd86e000bbe" width="200" />
-</p>
+</p
 
+### 8. Calendar
+<p align="center">
+ <img src="https://github.com/user-attachments/assets/9b24eeb1-5245-4b93-9ea8-8788ed5df595" width="200" />
+ <img src="https://github.com/user-attachments/assets/1bf9d15b-4525-44e2-9d9c-12d0763b0b7d" width="200" />
+</p
+
+### 9. Chatbot
+<p align="center">
+ <img src="https://github.com/user-attachments/assets/dc5cb254-7aa0-477f-9b7d-c74edf05190f" width="200" />
+ <img src="https://github.com/user-attachments/assets/f5fbef54-3089-434f-bde9-1ef0c8366617" width="200" />
+</p
+
+  
 
 
 
