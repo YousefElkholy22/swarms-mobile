@@ -19,7 +19,7 @@ import 'package:evnto/features/welcome/view/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../features/filters/filter_page.dart';
+import '../../features/search/view/pages/search_page.dart';
 import '../../features/home/view/pages/for_you_page.dart';
 import '../../features/notifications/notifications_page.dart';
 import '../../features/organizers/data/orgainzers_list_state.dart';

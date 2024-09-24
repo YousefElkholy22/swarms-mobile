@@ -8,11 +8,30 @@ import 'package:iconsax/iconsax.dart';
 import '../../../../core/localization/generated/l10n.dart';
 import '../../../../core/router/app_routes.dart';
 import '../../../../core/styles/app_colors.dart';
+import 'filters_bottom_sheet.dart';
 
-class SearchAppbar extends StatelessWidget {
-  const SearchAppbar({
+class SearchFilterRow extends StatefulWidget {
+  const SearchFilterRow({
     super.key,
   });
+
+  @override
+  State<SearchFilterRow> createState() => _SearchFilterRowState();
+}
+
+class _SearchFilterRowState extends State<SearchFilterRow> {
+  late TextEditingController searchController;
+  @override
+  void initState() {
+    super.initState();
+    searchController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    searchController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,36 +40,40 @@ class SearchAppbar extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            child: InkWell(
-              onTap: (){
-                Navigator.pushNamed(context, AppRoutes.search);
+            child: PublicTextFormField(
+              hint: S.current.search,
+              showprefixIcon: true,
+              prefixIcon: Iconsax.search_normal,
+              controller: searchController,
+              borderRadius: 16.r,
+              onChanged: (value) {
+
               },
-              child: PublicTextFormField(
-                hint: S.current.search,
-                enabled: false,
-                showprefixIcon: true,
-                prefixIcon: Iconsax.search_normal,
-                borderRadius: 16.r,
-              ),
             ),
           ),
-         16.pw,
+          16.pw,
           InkWell(
             onTap: () {
-              Navigator.pushNamed(context, AppRoutes.search);
+              showModalBottomSheet(
+                isScrollControlled: true,
+                context: context,
+                builder: (context) {
+                  return const FiltersBottomSheet();
+                },
+              );
             },
             child: Container(
               height: 60.r,
               width: 60.r,
               decoration: BoxDecoration(
-                color: AppColors.white,
+                color: AppColors.blue,
                 borderRadius: BorderRadius.all(Radius.circular(16.r)),
               ),
               child: Center(
                 child: Icon(
                   HugeIcons.strokeRoundedFilterHorizontal,
                   size: 24.r,
-                  color: AppColors.grey,
+                  color: AppColors.white,
                 ),
               ),
             ),

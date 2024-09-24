@@ -105,5 +105,9 @@ class Assets {
   /// Assets for imagesWelcome
   /// assets/images/welcome.png
   static const String imagesWelcome = "assets/images/welcome.png";
+
+  /// Assets for jsonsSearch
+  /// assets/jsons/search.json
+  static const String jsonsSearch = "assets/jsons/search.json";
 }
 
