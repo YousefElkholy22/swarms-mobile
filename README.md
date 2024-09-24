@@ -218,20 +218,20 @@ README.md
  <img src="https://github.com/user-attachments/assets/f5fbef54-3089-434f-bde9-1ef0c8366617" width="200" />
 </p
 
+### 10. Organizers
+<p align="center">
+ <img src="https://github.com/user-attachments/assets/9b3a9b9e-c405-4ba8-9b4c-1debde037fe5" width="200" />
+ <img src="https://github.com/user-attachments/assets/8348856b-4370-43b1-86b9-ae76bd416f46" width="200" />
+ <img src="https://github.com/user-attachments/assets/9c2dfa48-1cc8-4d75-97fc-a9c683a77f9b" width="200" />
+ <img src="https://github.com/user-attachments/assets/cf67ad1f-e61d-4466-8b66-2fe675e2474a" width="200" />
+</p
+
   
-
-
-
-
 
 ## ✔️ Demo
 <div align="center">
   <video src=https://github.com/user-attachments/assets/f7a3e789-eb43-49d3-b3a5-440e5ee685f8 width="200" />
 </div>
-
-
-
-
 
 
 ## ⛑️ Contributing
