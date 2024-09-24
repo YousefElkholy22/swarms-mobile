@@ -204,34 +204,29 @@ class AppDummy {
   ];
 
   static final messages = [
-    MessageEntity(
-      id: "1",
-      text: "Hello! How can I assist you today?",
-      time: DateTime.now().subtract(const Duration(minutes: 5)),
+    MessageModel(
+      message: "Hello! How can I assist you today?",
+      date: DateTime.now().subtract(const Duration(minutes: 5)),
       isBot: true,
     ),
-    MessageEntity(
-      id: "2",
-      text: "I need help with my order.",
-      time: DateTime.now().subtract(const Duration(minutes: 4)),
+    MessageModel(
+      message: "I need help with my order.",
+      date: DateTime.now().subtract(const Duration(minutes: 4)),
       isBot: false,
     ),
-    MessageEntity(
-      id: "3",
-      text: "what is the status of my order?",
-      time: DateTime.now().subtract(const Duration(minutes: 3)),
+    MessageModel(
+      message: "what is the status of my order?",
+      date: DateTime.now().subtract(const Duration(minutes: 3)),
       isBot: true,
     ),
-    MessageEntity(
-      id: "4",
-      text: "I need to choose an event which do you recommend?",
-      time: DateTime.now().subtract(const Duration(minutes: 2)),
+    MessageModel(
+      message: "I need to choose an event which do you recommend?",
+      date: DateTime.now().subtract(const Duration(minutes: 2)),
       isBot: false,
     ),
-    MessageEntity(
-      id: "5",
-      text: "I recommend you to attend the IEEE Victoris 3.0 event.",
-      time: DateTime.now().subtract(const Duration(minutes: 1)),
+    MessageModel(
+      message: "I recommend you to attend the IEEE Victoris 3.0 event.",
+      date: DateTime.now().subtract(const Duration(minutes: 1)),
       isBot: true,
     ),
   ];

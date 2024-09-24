@@ -3,6 +3,7 @@ import 'package:evnto/features/authentcation/view/pages/forget_password_screen.d
 import 'package:evnto/features/authentcation/view/pages/login_screen.dart';
 import 'package:evnto/features/authentcation/view/pages/otp_screen.dart';
 import 'package:evnto/features/authentcation/view/pages/register_screen.dart';
+import 'package:evnto/features/chatpot/bloc/chatbot_cubit.dart';
 import 'package:evnto/features/chatpot/view/pages/chatpot_page.dart';
 import 'package:evnto/features/event_details/view/pages/event_details_page.dart';
 import 'package:evnto/features/home/view/pages/all_events_page.dart';
@@ -27,6 +28,7 @@ import '../../features/organizers/data/orgainzers_list_state.dart';
 import '../../features/questions/bloc/question_cubit.dart';
 import '../../features/shared/data/shared_event_entity.dart';
 import '../../features/welcome/bloc/onboarding_bloc.dart';
+import '../service_locator/service_locator.dart';
 import 'app_routes.dart';
 
 class RouteGenerate {
@@ -136,7 +138,13 @@ class RouteGenerate {
       case AppRoutes.chatpot:
         return MaterialPageRoute(
           settings: routeSettings,
-          builder: (_) => const ChatpotPage(),
+          builder: (_) => BlocProvider(
+            create: (context) => ChatbotCubit(
+              chatpotRepo: getIt(),
+              appDB: getIt(),
+            ),
+            child: const ChatpotPage(),
+          ),
         );
 
       /// search

@@ -1,11 +1,32 @@
 import 'package:evnto/core/helpers/extensions/sizedbox_extensions.dart';
 import 'package:evnto/core/styles/app_colors.dart';
+import 'package:evnto/features/chatpot/bloc/chatbot_cubit.dart';
+import 'package:evnto/features/search/bloc/search_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconsax/iconsax.dart';
 
-class MessageInput extends StatelessWidget {
+class MessageInput extends StatefulWidget {
   const MessageInput({super.key});
+
+  @override
+  State<MessageInput> createState() => _MessageInputState();
+}
+
+class _MessageInputState extends State<MessageInput> {
+  late final TextEditingController controller;
+  @override
+  void initState() {
+    super.initState();
+    controller = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +47,7 @@ class MessageInput extends StatelessWidget {
         children: [
           Expanded(
             child: TextFormField(
+              controller: controller,
               decoration: InputDecoration(
                 contentPadding:
                     EdgeInsets.symmetric(horizontal: 16.w, vertical: 6.h),
@@ -36,11 +58,15 @@ class MessageInput extends StatelessWidget {
                 ),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(16.r),
-                  borderSide: const BorderSide(color: AppColors.lightGrey,),
+                  borderSide: const BorderSide(
+                    color: AppColors.lightGrey,
+                  ),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(16.r),
-                  borderSide: const BorderSide(color: AppColors.lightGrey,),
+                  borderSide: const BorderSide(
+                    color: AppColors.lightGrey,
+                  ),
                 ),
               ),
             ),
@@ -60,7 +86,8 @@ class MessageInput extends StatelessWidget {
               ),
             ),
             onTap: () {
-              // Handle send message
+              final bloc = context.read<ChatbotCubit>();
+              bloc.writeMeesage(controller.text);
             },
           ),
         ],

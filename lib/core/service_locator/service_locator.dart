@@ -1,3 +1,4 @@
+import 'package:evnto/features/chatpot/data/repos/chatpot_repo.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
@@ -18,8 +19,14 @@ Future<void> initServiceLocator() async {
     () => AppPrefs(sharedPrefs, storage),
   );
 
-  /// App DB
-  getIt.registerLazySingleton(() => AppDB());
+  /// app db
+  getIt.registerSingletonAsync(
+    () async {
+      final appDB = AppDB();
+      await appDB.initDB();
+      return appDB;
+    },
+  );
 
   /// api service
   getIt.registerLazySingleton(() => ApiService());
@@ -28,6 +35,13 @@ Future<void> initServiceLocator() async {
   getIt.registerLazySingleton(
     () => NetworkInfo(
       InternetConnectionChecker(),
+    ),
+  );
+
+  /// api service
+  getIt.registerLazySingleton(
+    () => ChatpotRepo(
+      apiService: getIt(),
     ),
   );
 }

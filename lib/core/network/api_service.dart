@@ -44,7 +44,7 @@ class ApiService {
     Map<String, dynamic>? query,
     bool isAI = false,
   }) async {
-    if (isAI) _dio.options.baseUrl = Env.aiUrl;
+    _dio.options.baseUrl = "https://7f42-197-32-29-130.ngrok-free.app";
     return await _dio.post(
       endPoint,
       data: body,

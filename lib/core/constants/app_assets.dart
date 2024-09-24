@@ -34,6 +34,10 @@ class Assets {
   /// assets/icons/app_icon.png
   static const String iconsAppIcon = "assets/icons/app_icon.png";
 
+  /// Assets for iconsFacbookOld
+  /// assets/icons/FacbookOld.png
+  static const String iconsFacbookOld = "assets/icons/FacbookOld.png";
+
   /// Assets for iconsFacebookLogo
   /// assets/icons/facebook_logo.png
   static const String iconsFacebookLogo = "assets/icons/facebook_logo.png";
@@ -45,6 +49,14 @@ class Assets {
   /// Assets for iconsLayer12x
   /// assets/icons/Layer_1@2x.png
   static const String iconsLayer12x = "assets/icons/Layer_1@2x.png";
+
+  /// Assets for iconsLinkedIn
+  /// assets/icons/linkedIn.png
+  static const String iconsLinkedIn = "assets/icons/linkedIn.png";
+
+  /// Assets for iconsX
+  /// assets/icons/X.png
+  static const String iconsX = "assets/icons/X.png";
 
   /// Assets for imagesAlarm
   /// assets/images/alarm.png
@@ -86,6 +98,10 @@ class Assets {
   /// assets/images/onboarding2.png
   static const String imagesOnboarding2 = "assets/images/onboarding2.png";
 
+  /// Assets for imagesProfileGirl
+  /// assets/images/profile_girl.png
+  static const String imagesProfileGirl = "assets/images/profile_girl.png";
+
   /// Assets for imagesSpeaker1
   /// assets/images/speaker1.png
   static const String imagesSpeaker1 = "assets/images/speaker1.png";
@@ -105,6 +121,10 @@ class Assets {
   /// Assets for imagesWelcome
   /// assets/images/welcome.png
   static const String imagesWelcome = "assets/images/welcome.png";
+
+  /// Assets for jsonsLoading
+  /// assets/jsons/loading.json
+  static const String jsonsLoading = "assets/jsons/loading.json";
 
   /// Assets for jsonsSearch
   /// assets/jsons/search.json

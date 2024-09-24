@@ -15,4 +15,16 @@ extension DateFormant on DateTime {
   String get hourMinute12Format {
     return DateFormat("hh:mm a").format(this);
   }
+
+  /// Ex: "2023-04-19 12:00: AM"
+  String get fullFormat {
+    return DateFormat("yyyy-MM-dd hh:mm: a").format(this);
+  }
+}
+
+extension StringToDate on String {
+  /// Ex: "2023-04-19 12:00: AM"
+  DateTime get fullFormat{
+    return DateFormat("yyyy-MM-dd hh:mm: a").parse(this);
+  }
 }
