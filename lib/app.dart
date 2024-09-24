@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
           physics: const BouncingScrollPhysics(),
         ),
         // home: const La(),
-        initialRoute: AppRoutes.layouts,
+        initialRoute: AppRoutes.welcome,
       ),
     );
   }
