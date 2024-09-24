@@ -1,3 +1,5 @@
+import 'package:evnto/core/helpers/env/env.dart';
+
 import '../constants/app_constants.dart';
 import 'api_constants.dart';
 import 'network_info.dart';
@@ -26,10 +28,13 @@ class ApiService {
   Future<Response> getData({
     required String endPoint,
     Map<String, dynamic>? query,
+    bool isAI = false,
   }) async {
+    if (isAI) _dio.options.baseUrl = Env.aiUrl;
     return await _dio.get(
       endPoint,
       queryParameters: query,
+      options: Options(),
     );
   }
 
@@ -37,7 +42,9 @@ class ApiService {
     required String endPoint,
     required Map<String, dynamic> body,
     Map<String, dynamic>? query,
+    bool isAI = false,
   }) async {
+    if (isAI) _dio.options.baseUrl = Env.aiUrl;
     return await _dio.post(
       endPoint,
       data: body,
@@ -48,7 +55,9 @@ class ApiService {
   Future<Response> deleteData({
     required String endPoint,
     Map<String, dynamic>? query,
+    bool isAI = false,
   }) async {
+    if (isAI) _dio.options.baseUrl = Env.aiUrl;
     return await _dio.delete(
       endPoint,
       queryParameters: query,
@@ -58,7 +67,7 @@ class ApiService {
   void _setUpDioConfig() {
     _dio = Dio(
       BaseOptions(
-        // baseUrl: ApiConstants.baseUrl,
+        baseUrl: Env.baseUrl,
         headers: headers,
         receiveDataWhenStatusError: true,
         connectTimeout: const Duration(milliseconds: 3600),

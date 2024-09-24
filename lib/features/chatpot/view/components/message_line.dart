@@ -2,7 +2,7 @@ import 'package:evnto/core/constants/app_assets.dart';
 import 'package:evnto/core/helpers/extensions/datetime_extensions.dart';
 import 'package:evnto/core/helpers/extensions/sizedbox_extensions.dart';
 import 'package:evnto/core/styles/app_colors.dart';
-import 'package:evnto/features/chatpot/data/message_entity.dart';
+import 'package:evnto/features/chatpot/data/models/message_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

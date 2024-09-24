@@ -2,7 +2,7 @@ import 'package:evnto/core/constants/app_assets.dart';
 import 'package:evnto/features/home/data/event_bannar_entity.dart';
 import 'package:evnto/features/search/data/models/recent_search_entity.dart';
 
-import '../../features/chatpot/data/message_entity.dart';
+import '../../features/chatpot/data/models/message_entity.dart';
 import '../../features/event_details/data/reivew_entity.dart';
 import '../../features/event_details/data/speaker_entity.dart';
 import '../../features/organizers/data/organizer_entity.dart';
