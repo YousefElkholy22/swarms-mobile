@@ -47,3 +47,13 @@ class PrefsKeys {
   static const accessToken = "access_token";
   static const refreshToken = "refresh_token";
 }
+
+
+class DBKeys {
+  DBKeys._();
+
+  static const chatbotTable = "chatbot";
+  static const message = "mesage";
+  static const isBot = "is_Bot";
+  static const date = "date";
+}

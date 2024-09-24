@@ -2,14 +2,14 @@ import 'package:evnto/core/constants/app_assets.dart';
 import 'package:evnto/core/helpers/extensions/datetime_extensions.dart';
 import 'package:evnto/core/helpers/extensions/sizedbox_extensions.dart';
 import 'package:evnto/core/styles/app_colors.dart';
-import 'package:evnto/features/chatpot/data/message_entity.dart';
+import 'package:evnto/features/chatpot/data/models/message_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/styles/app_fonts.dart';
 
 class MessageLine extends StatelessWidget {
-  final MessageEntity message;
+  final MessageModel message;
   const MessageLine({super.key, required this.message});
 
   @override
@@ -55,7 +55,7 @@ class MessageLine extends StatelessWidget {
               crossAxisAlignment: message.isBot? CrossAxisAlignment.start: CrossAxisAlignment.end,
               children: [
                 Text(
-                  message.text,
+                  message.message,
                   maxLines: 4,
                   
                   style: message.isBot
@@ -64,7 +64,7 @@ class MessageLine extends StatelessWidget {
                 ),
                 2.ph,
                 Text(
-                  message.time.hourMinute12Format,
+                  message.date.hourMinute12Format,
                   style: message.isBot
                       ? AppFonts.black12Normal
                       : AppFonts.white12Normal,
