@@ -98,7 +98,27 @@ class ProfileScreen extends StatelessWidget {
                 icon: Icons.logout,
                 title: "Logout",
                 isPage: false,
-                fun: () {},
+                fun: () {
+                  showBottomSheet(
+                    context: context,
+                    builder: (context) => Container(
+                      width: double.infinity,
+                      decoration: const BoxDecoration(
+                        color: AppColors.white,
+                      ),
+                      child: const Center(
+                        child: Column(
+                          children: [
+                            Icon(
+                              Icons.logout_rounded,
+                              color: AppColors.red,
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  );
+                },
               ),
               SizedBox(
                 height: context.height * 0.03,
