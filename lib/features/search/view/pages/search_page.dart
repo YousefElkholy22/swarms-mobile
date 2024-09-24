@@ -22,6 +22,9 @@ class SearchPage extends StatelessWidget {
           children: [
             const SearchFilterRow(),
             20.ph,
+            Expanded(
+              child: _getView(),
+            ),
 
 
           ],
@@ -29,4 +32,8 @@ class SearchPage extends StatelessWidget {
       ),
     );
   }
+
+  Widget _getView() {
+    return const OrganizersPage();
+  } 
 }
