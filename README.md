@@ -157,14 +157,12 @@ README.md
 ## 🌙 UI Screens
 ### 1. Splash
 <p align="center">
- <img src="https://github.com/user-attachme![home](https://github.com/user-attachments/assets/d03a72d7-e5ed-4b3d-a5fd-4c9ab44915bf)
-nts/assets/4f73ba27-2de5-4fc5-b0a3-858afae4f9aa" width="200" />
+ <img src="https://github.com/user-attachments/assets/4f73ba27-2de5-4fc5-b0a3-858afae4f9aa" width="200" />
 </p>
 
 ### 2. Onboarding
 <p align="center">
- <img src="![onboarding 1](https://github.com/user-attachments/assets/c1d0c5c4-c059-4f1e-9a72-27dac5fd64fd)
-  " width="200" />
+ <img src="https://github.com/user-attachments/assets/da514af4-2796-42bd-934f-59326e046a04" width="200" />
  <img src="https://github.com/user-attachments/assets/8c40a21f-43c1-4714-ac47-72832bfac748" width="200" />
  <img src="https://github.com/user-attachments/assets/13f6b75e-7904-486c-8ef8-28b656129d3b" width="200" />
 </p>
